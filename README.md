@@ -13,9 +13,14 @@ sudo launchctl unload /Library/LaunchDaemons/com.netskope.stagentsvc.plist
 ```sh
 heroku login
 heroku create
-# https://shrouded-garden-46362.herokuapp.com/ | https://git.heroku.com/shrouded-garden-46362.git
-git remote add heroku https://git.heroku.com/shrouded-garden-46362.git
+# Creating app... done, ⬢ shrouded-reaches-12121
+https://shrouded-reaches-12121.herokuapp.com/ | https://git.heroku.com/shrouded-reaches-12121.git
+git remote add heroku https://git.heroku.com/shrouded-reaches-12121.git
 git push heroku master
-# Use heroku buildpacks:set heroku/nodejs if the above fails
+
+To https://git.heroku.com/shrouded-reaches-12121.git
+
+heroku open
+# For debugging info
+heroku logs 
 ```
-* Heroku push error: https://stackoverflow.com/questions/43362014/heroku-no-default-language-could-be-detected-for-this-app-error-thrown-for-no
