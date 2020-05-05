@@ -33,6 +33,8 @@ heroku logs
 git add .
 git commit -m "Change greeting"
 git push heroku master
-# heroku logs
+# Optional log check
+heroku logs
 heroku open
+# If heroku open doesn't open, use the output of heroku master push to get the site link
 ```
