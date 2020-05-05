@@ -2,7 +2,7 @@
 * Intro in Wiki page
 
 ### Installing the Heroku CLI
-* Diagram 16-d: First Time and Subsequent deployments
+* D 16-d: First Time and Subsequent deployments
 * New account in heroku.com
 * Heroku cli via brew tap heroku/brew && brew install heroku
 * heroku -v
@@ -38,3 +38,10 @@ heroku logs
 heroku open
 # If heroku open doesn't open, use the output of heroku master push to get the site link
 ```
+
+### Intro to Google OAuth
+* Diagram Link: https://www.draw.io/?mode=github#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2FFullstackReactCode%2Fmaster%2Fdiagrams%2F01%2Fdiagrams.xml
+* D 2-user pro:
+* Diagram link: https://app.diagrams.net/?mode=github#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2FFullstackReactCode%2Fmaster%2Fdiagrams%2F02%2Fdiagrams.xml
+* D 3-oauth:
+
