@@ -1,4 +1,4 @@
-commit_message=`git diff|grep '+#'|tr -d '+#'|awk 'NR==1{print $0}'`
+commit_message=`grep "##" README.md|awk 'END{print}'|tr -d '#'`
 echo ${commit_message}
 
 git add --all
