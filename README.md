@@ -27,3 +27,12 @@ heroku open
 # For debugging info
 heroku logs 
 ```
+
+### Followup Deployments
+```sh
+git add .
+git commit -m "Change greeting"
+git push heroku master
+# heroku logs
+heroku open
+```
