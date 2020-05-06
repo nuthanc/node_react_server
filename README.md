@@ -56,3 +56,16 @@ heroku open
 * npm i passport passport-google-oauth20
 * Import passport and passport strategy in index.js
 * passport.use to use GoogleStrategy instance
+
+### Enabling Google OAuth API
+* Go to console.developers.google.com
+* Create a New Project called emaily-dev
+* Enable API in APIs and Services Dashboard
+* Search for Google+, select Google+ API and click Enable
+* OAuth consent screen, external and Application name and Save
+* Click on Create Credentials and select OAuth client Id
+* Enter http://localhost:5000 for Authorized js origins http://localhost:5000/auth/google/callback for Authorized Redirect URIs
+
+
+
+
