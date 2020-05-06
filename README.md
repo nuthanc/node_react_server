@@ -51,3 +51,8 @@ heroku open
 ### Overview of Passport JS
 * D 3.5:
 * D 5:
+
+### Passport Setup
+* npm i passport passport-google-oauth20
+* Import passport and passport strategy in index.js
+* passport.use to use GoogleStrategy instance
