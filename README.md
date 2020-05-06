@@ -47,3 +47,7 @@ heroku open
 
 ### The OAuth Flow
 * D 3-oauth:
+
+### Overview of Passport JS
+* D 3.5:
+* D 5:
