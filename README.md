@@ -66,6 +66,10 @@ heroku open
 * Click on Create Credentials and select OAuth client Id
 * Enter http://localhost:5000 for Authorized js origins http://localhost:5000/auth/google/callback for Authorized Redirect URIs
 
-
+### Securing API keys
+* D 19:
+* Create config folder in server dir
+* Create keys.js and store client Id and secret in it
+* Don't commit the above file to git by adding it in .gitignore
 
 
