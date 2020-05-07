@@ -72,4 +72,8 @@ heroku open
 * Create keys.js and store client Id and secret in it
 * Don't commit the above file to git by adding it in .gitignore
 
-
+### Google Strategy Options
+* Import keys and pass it to GoogleStrategy
+* Diagram link: https://app.diagrams.net/?mode=github#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2FFullstackReactCode%2Fmaster%2Fdiagrams%2F02%2Fdiagrams.xml
+* D 3-oauth:
+* Add callbackURL as another option
