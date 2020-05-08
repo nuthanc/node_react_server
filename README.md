@@ -89,3 +89,6 @@ heroku open
 * https://console.developers.google.com/apis/credentials/oauthclient/940402436141-sm3pj6g8mcdhnkge669fst815bbsdmrg.apps.googleusercontent.com?project=emaily-dev-276408
 * For valid redirect URI
 * It takes small amount of time for the URI to update in the server
+
+### OAuth Callbacks
+* Add route handler for google auth callback
