@@ -18,5 +18,12 @@ passport.use(
   )
 );
 
+app.get(
+  '/auth/google',
+  passport.authenticate('google', {
+    scope: ['profile', 'email'],
+  })
+);
+
 const PORT = process.env.PORT || 5000;
-app.listen(PORT);
+app.listen(PORT, () => console.log(`App started on port ${PORT}`));

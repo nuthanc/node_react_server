@@ -77,3 +77,10 @@ heroku open
 * Diagram link: https://app.diagrams.net/?mode=github#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2FFullstackReactCode%2Fmaster%2Fdiagrams%2F02%2Fdiagrams.xml
 * D 3-oauth:
 * Add callbackURL as another option
+
+### Testing OAuth
+* OAuth flow managed by passport using passport authenticate
+* 1st argument is the strategy
+* 2nd argument is an options object
+* node index.js and go to localhost:5000/auth/google
+https://accounts.google.com/signin/oauth/error?authError=ChVyZWRpcmVjdF91cmlfbWlzbWF0Y2gS1QJUaGUgcmVkaXJlY3QgVVJJIGluIHRoZSByZXF1ZXN0LCBodHRwOi8vbG9jYWxob3N0OjUwMDAvYXV0aC9nb29nbGUvY2FsbGJhY2ssIGRvZXMgbm90IG1hdGNoIHRoZSBvbmVzIGF1dGhvcml6ZWQgZm9yIHRoZSBPQXV0aCBjbGllbnQuIFRvIHVwZGF0ZSB0aGUgYXV0aG9yaXplZCByZWRpcmVjdCBVUklzLCB2aXNpdDogaHR0cHM6Ly9jb25zb2xlLmRldmVsb3BlcnMuZ29vZ2xlLmNvbS9hcGlzL2NyZWRlbnRpYWxzL29hdXRoY2xpZW50Lzk0MDQwMjQzNjE0MS1zbTNwajZnOG1jZGhua2dlNjY5ZnN0ODE1YmJzZG1yZy5hcHBzLmdvb2dsZXVzZXJjb250ZW50LmNvbT9wcm9qZWN0PTk0MDQwMjQzNjE0MRpFaHR0cDovL2RldmVsb3BlcnMuZ29vZ2xlLmNvbS9hY2NvdW50cy9kb2NzL09BdXRoMkxvZ2luI3NldHJlZGlyZWN0dXJpIJAD&client_id=940402436141-sm3pj6g8mcdhnkge669fst815bbsdmrg.apps.googleusercontent.com
