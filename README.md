@@ -83,4 +83,9 @@ heroku open
 * 1st argument is the strategy
 * 2nd argument is an options object
 * node index.js and go to localhost:5000/auth/google
-https://accounts.google.com/signin/oauth/error?authError=ChVyZWRpcmVjdF91cmlfbWlzbWF0Y2gS1QJUaGUgcmVkaXJlY3QgVVJJIGluIHRoZSByZXF1ZXN0LCBodHRwOi8vbG9jYWxob3N0OjUwMDAvYXV0aC9nb29nbGUvY2FsbGJhY2ssIGRvZXMgbm90IG1hdGNoIHRoZSBvbmVzIGF1dGhvcml6ZWQgZm9yIHRoZSBPQXV0aCBjbGllbnQuIFRvIHVwZGF0ZSB0aGUgYXV0aG9yaXplZCByZWRpcmVjdCBVUklzLCB2aXNpdDogaHR0cHM6Ly9jb25zb2xlLmRldmVsb3BlcnMuZ29vZ2xlLmNvbS9hcGlzL2NyZWRlbnRpYWxzL29hdXRoY2xpZW50Lzk0MDQwMjQzNjE0MS1zbTNwajZnOG1jZGhua2dlNjY5ZnN0ODE1YmJzZG1yZy5hcHBzLmdvb2dsZXVzZXJjb250ZW50LmNvbT9wcm9qZWN0PTk0MDQwMjQzNjE0MRpFaHR0cDovL2RldmVsb3BlcnMuZ29vZ2xlLmNvbS9hY2NvdW50cy9kb2NzL09BdXRoMkxvZ2luI3NldHJlZGlyZWN0dXJpIJAD&client_id=940402436141-sm3pj6g8mcdhnkge669fst815bbsdmrg.apps.googleusercontent.com
+
+### Authorized Redirect URI's
+* Redirect_uri for security purposes so that it won't be misused by malicious users
+* https://console.developers.google.com/apis/credentials/oauthclient/940402436141-sm3pj6g8mcdhnkge669fst815bbsdmrg.apps.googleusercontent.com?project=emaily-dev-276408
+* For valid redirect URI
+* It takes small amount of time for the URI to update in the server
