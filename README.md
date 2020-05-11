@@ -97,3 +97,8 @@ heroku open
 * Other arguments to GoogleStrategy second argument
 * Read or delete emails using access token
 * refreshToken is used to refresh the access token
+
+### Nodemon Setup
+* npm install nodemon
+* In package.json scripts, add dev
+* npm run dev
