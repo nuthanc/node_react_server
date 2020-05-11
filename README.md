@@ -92,3 +92,8 @@ heroku open
 
 ### OAuth Callbacks
 * Add route handler for google auth callback
+
+### Access and Refresh Tokens
+* Other arguments to GoogleStrategy second argument
+* Read or delete emails using access token
+* refreshToken is used to refresh the access token
