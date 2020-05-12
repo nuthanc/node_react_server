@@ -102,3 +102,25 @@ heroku open
 * npm install nodemon
 * In package.json scripts, add dev
 * npm run dev
+
+### Server Structure Refactor
+* Diagram link: https://app.diagrams.net/?mode=github#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2FFullstackReactCode%2Fmaster%2Fdiagrams%2F02%2Fdiagrams.xml
+* D 20: Structure
+* New routes folder and add authRoutes.js
+* New services dir and add passport.js
+```js
+const passportConfig = require('./services/passport');
+//to
+require('./services/passport');
+//cause we are not exporting anything
+```
+* Exporting a function in authRoutes
+* Assume we will be calling with express app object
+* In index.js, call authRoutes with app
+```js
+const authRoutes = require('./routes/authRoutes');
+const app = express();
+authRoutes(app);
+```
+* Actually authRoutes is not really needed
+* require returns a function and app is argument to that function
