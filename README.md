@@ -49,7 +49,7 @@ heroku open
 * D 3-oauth:
 
 ### Overview of Passport JS
-* D 3.5:
+* **D 3.5**:
 * D 5:
 
 ### Passport Setup
@@ -129,3 +129,8 @@ authRoutes(app);
 * D 9: Information between requests is not shared
 * D 10: Tokens
 * D 11: Browser automatically includes the Cookie into our request
+
+### Signing In Users with OAuth
+* D 3.5:
+* D 21:
+* D 11:
