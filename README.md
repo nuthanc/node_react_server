@@ -124,3 +124,8 @@ authRoutes(app);
 ```
 * Actually authRoutes is not really needed
 * require returns a function and app is argument to that function
+
+### The Theory of Authentication
+* D 9: Information between requests is not shared
+* D 10: Tokens
+* D 11: Browser automatically includes the Cookie into our request
