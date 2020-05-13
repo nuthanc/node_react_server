@@ -141,4 +141,10 @@ authRoutes(app);
   * Schema-less compared to other DBs
 * D 7: How Mongoose helps us
 
-
+### MongoDB Setup
+* D 22: Remotely hosted
+* mlab.com
+* Log in with MongoDB Atlas
+* Create Cluster
+* Add Current IP Address
+* Connect with Application(Drivers)
