@@ -134,3 +134,11 @@ authRoutes(app);
 * D 3.5:
 * D 21:
 * D 11:
+
+### Introduction to MongoDB
+* D 6-mong:
+* D 6: Collections and Records
+  * Schema-less compared to other DBs
+* D 7: How Mongoose helps us
+
+
