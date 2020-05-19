@@ -148,3 +148,12 @@ authRoutes(app);
 * Create Cluster
 * Add Current IP Address
 * Connect with Application(Drivers)
+
+### Connecting Mongoose to Mongo
+* npm i mongoose
+* In index.js, require mongoose
+* Add mongoose uri in config keys.js
+* Require config keys
+* npm run dev
+* D 6-mong:
+
