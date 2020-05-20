@@ -159,3 +159,24 @@ authRoutes(app);
 
 ### Breather and Review
 * D 23:
+
+### Mongoose Model Classes
+* D 7: Model Class and Collection
+* Create models dir inside server
+* Create User.js inside models
+```js
+//ES2015 destructuring: The following are equivalent
+const Schema = mongoose.Schema;
+//and
+const { Schema } = mongoose;
+```
+* D 6-2: Users Collection can have different properties
+* But mongoose removes the above ability
+* Mongoose wants to know the properties ahead of time
+* Schema will describe how the properties will look like
+* mongoose model's 1st argument is name of the collection
+* 2nd argument will be the schema
+* mongoose.model creates a new collection
+* model does not override
+* We can freely add or subtract properties to the schema
+* Require User.js in index.js
