@@ -178,5 +178,33 @@ const { Schema } = mongoose;
 * 2nd argument will be the schema
 * mongoose.model creates a new collection
 * model does not override
+* mongoose.model with schema loads into mongoose
 * We can freely add or subtract properties to the schema
 * Require User.js in index.js
+
+### Saving Model Instances
+* D 23:
+* npm run dev
+* Go to localhost:5000/auth/google
+* Check the server logs
+* Remove the console logs in GoogleStrategy
+* No require statements for mongoose model classes
+* This is because when using **tests and required multiple times, mongoose will get confused and will think you are loading multiple models called users and will throw an error**
+* In passport.js file, require mongoose library
+* Pull a schema out of mongoose using mongoose.model with only one argument
+* D 7:
+* new User creates a new instance of the User which represents a record
+* But it needs to be persisted
+* It is done using save method
+* npm run dev
+* Error in server logs
+```
+Schema hasn't been registered for model "users"
+```
+* This is because in index.js we are using the model before defining it reflected in the require statements
+* Navigate to localhost:5000/auth/google
+* Open mlab and check the record
+  * https://account.mongodb.com/account/login
+* Mongoose with mongodb atlas
+  * https://developerhandbook.com/mongodb/connect-mongo-atlas-mongoose/
+* Everything was fine, just had to whitelist ip
