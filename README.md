@@ -217,5 +217,11 @@ Schema hasn't been registered for model "users"
 * In passport.js, add condition in callback of GoogleStrategy
 * Reaching out to db is an asynchronous action
 * The query returns a Promise
-* 
+
+### Passport Callbacks
+* Done with the authentication process using done function
+* First arg of done function is err object
+* The second arg will be the User record
+* 2 user instances created, one with new User and the other from then(Promise callback)
+
 
