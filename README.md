@@ -208,3 +208,14 @@ Schema hasn't been registered for model "users"
 * Mongoose with mongodb atlas
   * https://developerhandbook.com/mongodb/connect-mongo-atlas-mongoose/
 * Everything was fine, just had to whitelist ip
+
+### Mongoose Queries
+* If we go to localhost:5000/auth/google, we see another record for the same user being created
+* Diagram link: https://app.diagrams.net/?mode=github#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2FFullstackReactCode%2Fmaster%2Fdiagrams%2F02%2Fdiagrams.xml
+* D 24: Flow to create or not create
+* D 7: Model to Collection
+* In passport.js, add condition in callback of GoogleStrategy
+* Reaching out to db is an asynchronous action
+* The query returns a Promise
+* 
+
