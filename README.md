@@ -241,3 +241,16 @@ Schema hasn't been registered for model "users"
 
 ### Deserialize User
 * The 1st argument is the exact token we had stuffed into the cookie
+
+### Enabling Cookies
+* Instruct passport to use cookies to handle authentication
+* Install cookie-session using npm i cookie-session
+* Require that and passport
+* app use cookieSession with config object
+* maxAge: how long till it expires(in ms)
+* We are giving 30 days
+* key: Used for encrypting our cookie
+* key is coming from config keys.js
+* This cookieKey can be any random string of characters
+* Tell passport to use cookies using initialize and session
+* Start server using npm run dev
