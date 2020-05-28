@@ -238,3 +238,6 @@ Schema hasn't been registered for model "users"
 * user.id is a shortcut that automatically references the Mongo generated id
 * D 27: Why user id and not google profile id
 * passport will then stuff that user into a cookie
+
+### Deserialize User
+* The 1st argument is the exact token we had stuffed into the cookie
