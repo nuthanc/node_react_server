@@ -254,3 +254,12 @@ Schema hasn't been registered for model "users"
 * This cookieKey can be any random string of characters
 * Tell passport to use cookies using initialize and session
 * Start server using npm run dev
+
+### Testing Authentication
+* D 15: After OAuth flow
+* New Route Handler in routes authRoutes.js
+* npm run dev
+* Go to localhost:5000/auth/google
+* This returns our cookie into our browser after the OAuth flow
+* In new tab, go to localhost:5000/api/current_user
+  * Flow followed when navigated to that endpoint is depicted in D 15
