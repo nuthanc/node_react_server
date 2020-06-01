@@ -263,3 +263,11 @@ Schema hasn't been registered for model "users"
 * This returns our cookie into our browser after the OAuth flow
 * In new tab, go to localhost:5000/api/current_user
   * Flow followed when navigated to that endpoint is depicted in D 15
+
+### Logging Out Users
+* In authRoutes.js, /api/logout route handler
+* req.logout is another function automatically attached by passport to req
+* It takes the cookie and kills the id contained in the cookie
+* Test this out using npm run dev
+* Navigate localhost:5000/api/logout
+* Verify in http://localhost:5000/api/current_user
