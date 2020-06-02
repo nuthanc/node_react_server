@@ -243,6 +243,7 @@ Schema hasn't been registered for model "users"
 * The 1st argument is the exact token we had stuffed into the cookie
 
 ### Enabling Cookies
+* Diagram Link: https://app.diagrams.net/?mode=github#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2FFullstackReactCode%2Fmaster%2Fdiagrams%2F02%2Fdiagrams.xml
 * Instruct passport to use cookies to handle authentication
 * Install cookie-session using npm i cookie-session
 * Require that and passport
@@ -273,6 +274,7 @@ Schema hasn't been registered for model "users"
 * Verify in http://localhost:5000/api/current_user
 
 ### A Deeper Dive
+* Diagram Link: https://app.diagrams.net/?mode=github#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2FFullstackReactCode%2Fmaster%2Fdiagrams%2F02%2Fdiagrams.xml
 * app.use calls
   * Wiring up middleware
   * Middleware are small functions that modify incoming requests before sending them to Route handlers
@@ -318,5 +320,9 @@ Schema hasn't been registered for model "users"
     * This is where the Browser is automatically including the cookie and sending it to our backend server
   * We can logout and see the setCookie session again
     * But if we decrypt that, we will be getting empty as userId is no longer there
-    
 
+### Dev vs Prod Keys
+* D 28: 2 separate set of keys
+  * Even if it's stolen, another set of keys in the Production env
+  * We want 2 dbs where the Production db has clean data,i.e, only User data and not test data
+* D 18:
