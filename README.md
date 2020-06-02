@@ -271,3 +271,52 @@ Schema hasn't been registered for model "users"
 * Test this out using npm run dev
 * Navigate localhost:5000/api/logout
 * Verify in http://localhost:5000/api/current_user
+
+### A Deeper Dive
+* app.use calls
+  * Wiring up middleware
+  * Middleware are small functions that modify incoming requests before sending them to Route handlers
+  * D 15
+* D 4
+* In current_user endpoint, just to test out cookies, send req.session
+* Make sure you are logged in /auth/google
+* Now go to localhost:5000/api/current_user
+```js
+//Output of req.session
+{
+  - passport: {
+      user: "5ecd2c88af1f1204c76841ec"
+    }
+}
+// This is the info that is stored in the cookie
+```
+* D 15
+* Cookie-Session extracts the data out of the cookie and then assigns it to req.session
+* Passport is looking at req.session and passes that data to deserialize user
+* D 12: 
+  * Difference between cookie-session and express-session
+    * How the data is stored
+  * *Cookie* is the session in **cookie-session** library
+  * *Reference to a session* in **express-session** library
+* D 14
+* cookie-session: Data inside the cookie
+  * 4kb: Max size(This is sufficient for us as we are storing only the id)
+* express-session: Data outside the cookie(i.e, in some store like a db)
+  * Any amount of data
+* **Visual look on cookies**
+  * Open Chrome Inspect
+  * Network Request tab
+  * Logout endpoint(If logged in previously)
+  * Look at Headers particularly Response Headers Set-Cookie's session
+  * This Session is encrypted by Cookie session and it contains everything that we have to do with the current session
+  * Now navigate to /auth/google
+  * Click on the first error callback in the Network requests tab
+  * Now the session is significantly longer because it contains more info
+  * Now go to /api/current_user: No cookies here in the Response headers because the server is not modifying anything
+  * We are just reading the cookie automatically included by the client
+    * But we can see the cookie in the Request Headers
+    * This is where the Browser is automatically including the cookie and sending it to our backend server
+  * We can logout and see the setCookie session again
+    * But if we decrypt that, we will be getting empty as userId is no longer there
+    
+
