@@ -62,7 +62,8 @@ heroku open
 * Create a New Project called emaily-dev
 * Enable API in APIs and Services Dashboard
 * Search for Google+, select Google+ API and click Enable
-* OAuth consent screen, external and Application name and Save
+* OAuth consent screen, external and Application name(Shown to Users: give a nice name) and Save
+* In the above consent screen, for Production application give Homepage url, logo and other required details
 * Click on Create Credentials and select OAuth client Id
 * Enter http://localhost:5000 for Authorized js origins http://localhost:5000/auth/google/callback for Authorized Redirect URIs
 
@@ -326,3 +327,18 @@ Schema hasn't been registered for model "users"
   * Even if it's stolen, another set of keys in the Production env
   * We want 2 dbs where the Production db has clean data,i.e, only User data and not test data
 * D 18:
+
+### Generating Production Resources
+* Create new db in mongodb atlas
+* https://cloud.mongodb.com/v2/5ebc0abdea7241503870c172#clusters
+* https://mlab.com/home
+* https://cloud.mongodb.com/v2/5ed72da28b65716fcbfa96f4#clusters
+* Create new Google API by visiting console.developers.google.com
+* Create a separate project
+* Create a New Project called emaily-prod
+* Enable API in APIs and Services Dashboard
+* Search for Google+, select Google+ API and click Enable
+* OAuth consent screen, external and Application name(Shown to Users: give a nice name) and Save
+* In the above consent screen, for Production application give Homepage url, logo and other required details
+* Click on Create Credentials and select OAuth client Id
+
