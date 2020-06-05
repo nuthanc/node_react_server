@@ -351,3 +351,7 @@ Schema hasn't been registered for model "users"
 * Cut everything out of keys.js and copy to dev.js
 * Now in keys.js, we figure out what set of credentials to return
 * Heroku automatically sets NODE_ENV
+
+### Version Control Scheme
+* module.exports in if and else for prod and dev keys
+* Create prod.js in config 
