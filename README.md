@@ -342,3 +342,12 @@ Schema hasn't been registered for model "users"
 * In the above consent screen, for Production application give Homepage url, logo and other required details
 * Click on Create Credentials and select OAuth client Id
 
+### Determining Environment
+* heroku open
+* Select that address
+* Paste that address in Authorized Redirect URIs followed by /auth/google/callback
+* Enter just the domain name for Authorized js origins
+* Create dev.js in config dir
+* Cut everything out of keys.js and copy to dev.js
+* Now in keys.js, we figure out what set of credentials to return
+* Heroku automatically sets NODE_ENV
