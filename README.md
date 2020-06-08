@@ -382,3 +382,20 @@ https://shrouded-reaches-12121.herokuapp.com/
 https://shrouded-reaches-12121.herokuapp.com/auth/google
 # Error 400: redirect_uri_mismatch
 ```
+
+### Fixing Heroku Proxy Issues
+* Error due to http instead of https
+* In services passport.js file, callbackURL in GoogleStrategy is a relative path
+* GoogleStrategy decides what domain to append to the request
+* GoogleStrategy is the culprit and the Factor number 1
+* The other factor which is causing GoogleStrategy to be the culprit is *D 29*
+* Heroku uses *Proxy* to route to the correct server
+* If request from the Browser goes through any Proxy, the request should no longer be https because it inherently doesn't trust requests that come through a proxy
+* But we are ok with Proxy, so we can **add that config to GoogleStrategy**
+* The other possible solution is to **spill out the entire callbackURL in GoogleStrategy**
+* We are going with the first solution of *proxy: true* in GoogleStrategy
+```sh
+gaa
+gcmsg "Tweak Google Strategy settings"
+git push heroku master
+```
