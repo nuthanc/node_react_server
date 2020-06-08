@@ -355,3 +355,14 @@ Schema hasn't been registered for model "users"
 ### Version Control Scheme
 * module.exports in if and else for prod and dev keys
 * Create prod.js in config 
+
+### Heroku Env Variables
+* Navigate to heroku.com
+* Go to shrouded-reaches-12121 Settings
+* Config Variables and add the keys
+* Diagram Link: https://app.diagrams.net/?mode=github#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2FFullstackReactCode%2Fmaster%2Fdiagrams%2F02%2Fdiagrams.xml
+* D 16:
+```sh
+git add .
+git commit -m "Finished auth flow"
+git push heroku master
