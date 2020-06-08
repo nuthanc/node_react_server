@@ -366,3 +366,19 @@ Schema hasn't been registered for model "users"
 git add .
 git commit -m "Finished auth flow"
 git push heroku master
+# remote: -----> Creating runtime environment
+# remote:        
+# remote:        NPM_CONFIG_LOGLEVEL=error
+# remote:        NODE_ENV=production
+# remote:        NODE_MODULES_CACHE=true
+# remote:        NODE_VERBOSE=false
+# Here is the NODE_ENV
+heroku open
+# The above is not opening 
+# So manually navigate to: 
+https://shrouded-reaches-12121.herokuapp.com/
+# The above shows No get request to that
+# Next move to Oauth flow
+https://shrouded-reaches-12121.herokuapp.com/auth/google
+# Error 400: redirect_uri_mismatch
+```
