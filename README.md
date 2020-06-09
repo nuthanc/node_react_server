@@ -398,4 +398,8 @@ https://shrouded-reaches-12121.herokuapp.com/auth/google
 gaa
 gcmsg "Tweak Google Strategy settings"
 git push heroku master
+# Next move to Oauth flow
+https://shrouded-reaches-12121.herokuapp.com/auth/google
 ```
+Error in the above. Check that
+## One way of debugging is placing the mongoURI, googleclientid and secret in dev.js and check
