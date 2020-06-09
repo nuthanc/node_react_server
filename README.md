@@ -401,3 +401,13 @@ git push heroku master
 # Next move to Oauth flow
 https://shrouded-reaches-12121.herokuapp.com/auth/google
 ```
+* Solved Signin error. Did the following
+```
+* Copied configs from Heroku and placed in dev.js and commented previous dev.js
+* Added localhost to Authorized JS origins and the other in Google console
+* Checked locally after console logging profile of GoogleStrategy
+* Also had to enable globle access to mongodb application
+* Check again with heroku after committing README as git push heroku master
+```
+* Verify in https://shrouded-reaches-12121.herokuapp.com/api/current_user
+* https://shrouded-reaches-12121.herokuapp.com/api/logout
