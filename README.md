@@ -411,3 +411,11 @@ https://shrouded-reaches-12121.herokuapp.com/auth/google
 ```
 * Verify in https://shrouded-reaches-12121.herokuapp.com/api/current_user
 * https://shrouded-reaches-12121.herokuapp.com/api/logout
+
+### React App Generation
+* Go to Google and search for create-react-app
+* Inside server dir
+```sh
+npx create-react-app client
+```
+
