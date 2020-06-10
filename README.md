@@ -419,3 +419,12 @@ https://shrouded-reaches-12121.herokuapp.com/auth/google
 npx create-react-app client
 ```
 
+### A Separate Front End Server
+* cd client and npm start 
+* We see a server running at port 3000
+* Diagram Link: https://app.diagrams.net/?mode=github#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2FFullstackReactCode%2Fmaster%2Fdiagrams%2F04%2Fdiagrams.xml
+* D 12-reac:
+  * Front end server: js stuff
+  * Back end server: json stuff
+  * But why 2 servers: We could have handled React from Express itself
+  * It's because we get a lot out-of-the-box with create-react-app
