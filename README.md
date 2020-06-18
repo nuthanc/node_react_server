@@ -428,3 +428,12 @@ npx create-react-app client
   * Back end server: json stuff
   * But why 2 servers: We could have handled React from Express itself
   * It's because we get a lot out-of-the-box with create-react-app
+
+### Running the Client and Server
+* Add client script in server's package.json
+* Add **prefix** so that it executes npm run start w.r.t to the correct dir
+* Rename dev to server for server's index.js
+```sh
+npm i concurrently
+# Then run npm run dev
+```
