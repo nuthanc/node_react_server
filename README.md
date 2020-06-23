@@ -437,3 +437,38 @@ npx create-react-app client
 npm i concurrently
 # Then run npm run dev
 ```
+
+### Routing Stumbling Block
+* Add an anchor tag in App.js for Google Sign-in
+```html
+<a href="/auth/google">Sign In with Google</a>
+```
+* Naive approach of writing href
+  * Naive because we are providing relative link or path
+  * Browser assumes it is on the same domain
+```html
+<a href="http://localhost:5000/auth/google">Sign In with Google</a>
+```
+* The above will work only in the dev environment
+  * Because we need to manually change localhost:5000 to shrouded-reaches.heroku.com manually at every a tab referring to auth server
+* One way to solve this is to add a check whether is dev or prod
+* But even that is too much work
+* Revert back to only /auth/google
+* **One small change** we are going to make this work
+  * In client's package.json, add proxy for /auth/google route(This doesn't work, use Resolving proxy error)
+* Stop the server and start again because **Live reload** of React doesn't work when we change in package.json file
+* After adding the proxy in setupProxy.js, when we click on Sign In with Google, we still get redirect_uri_mismatch error
+```txt
+Error 400: redirect_uri_mismatch
+
+The redirect URI in the request, http://localhost:3000/auth/google/callback, does not match the ones authorized for the OAuth client. To update the authorized redirect URIs, visit: https://console.developers.google.com/apis/credentials/oauthclient/940402436141-sm3pj6g8mcdhnkge669fst815bbsdmrg.apps.googleusercontent.com?project=940402436141
+```
+#### Resolving proxy error
+* In client dir
+* Lookup docs for http-proxy-middleware
+```sh
+npm i http-proxy-middleware
+```
+* Remove the proxy entry from package.json of client
+* Create setupProxy.js in client src dir
+* Restart server with npm run dev as Anytime you make a change to the proxy or the Google Project's URI or Origins settings you should restart the server
