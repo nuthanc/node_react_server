@@ -445,7 +445,8 @@ npm i concurrently
 ```
 * Naive approach of writing href
   * Naive because we are providing relative link or path
-  * Browser assumes it is on the same domain
+  * Browser assumes it is on the same domain, i.e, the Browser automatically prepends the domain name
+  * We just need to provide the relative path
 ```html
 <a href="http://localhost:5000/auth/google">Sign In with Google</a>
 ```
@@ -472,3 +473,33 @@ npm i http-proxy-middleware
 * Remove the proxy entry from package.json of client
 * Create setupProxy.js in client src dir
 * Restart server with npm run dev as Anytime you make a change to the proxy or the Google Project's URI or Origins settings you should restart the server
+
+### The Beauty of Create React App's Proxy
+* Add the above 3000/auth/callback to Google's console
+* We are doing this only on the dev side
+* Add this to Authorized Redirect URIs
+```txt
+http://localhost:3000/auth/google/callback
+```
+* After save, it will take a *couple of minutes* to show in the servers
+* Proxy will automatically forward request coming to /auth/google to localhost:5000/auth/google
+* Diagram link: https://app.diagrams.net/?mode=github#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2FFullstackReactCode%2Fmaster%2Fdiagrams%2F01%2Fdiagrams.xml
+* D 5-archi: ONly for dev mode(New create-react-app requires http-proxy-middleware)
+  * Proxy included with create-react-app
+* D 6-archit: **In Production**
+  * In production, the localhost is automatically converted to the heroku domain
+  * In Production, create-react-app **server does not even exist**
+  * Before deploying our application, the React project is first built
+  * The create-react-app takes all the different js, css and other files and will run webpack and babel over all those files and save a final production build of our application in build dir
+  ```sh
+  #Demonstrated by the following
+  cd client
+  npm run build
+  # check in client/build
+  # We no longer need to run create-react-app application at all
+  # Create-react-app is giving us Live reload, linting, error-checking
+  # It exists to give Good development experience
+  # We don't need that behavior in production
+  ```
+  * In production, it automatically prepends shrouded-reaches.heroku.com to /auth/google and there is no Proxy required as there is only one server(Express)
+  * Also, the proxy config(setupProxy.js) is not used as npm run build places all the built code to client/build
