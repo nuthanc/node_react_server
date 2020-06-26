@@ -503,3 +503,37 @@ http://localhost:3000/auth/google/callback
   ```
   * In production, it automatically prepends shrouded-reaches.heroku.com to /auth/google and there is no Proxy required as there is only one server(Express)
   * Also, the proxy config(setupProxy.js) is not used as npm run build places all the built code to client/build
+
+### Why This Architecture
+* Test npm run dev and Oauth stuff
+* Diagram link: https://app.diagrams.net/?mode=github#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2FFullstackReactCode%2Fmaster%2Fdiagrams%2F01%2Fdiagrams.xml
+* D 7-other: why didn't we take this architecture?
+  * One server to serve front-end development assets
+  * Another that acts as API that serves up all the info for our App
+  * D 8-other:
+  * This approach could be taken
+* D 5-arch: But 2 reasons why we sought this type of architecture
+  * Diagram link: https://app.diagrams.net/?mode=github#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2FFullstackReactCode%2Fmaster%2Fdiagrams%2F02%2Fdiagrams.xml
+  1. D 13: Use of cookies in our authentication
+    * If the browser wants to make AJAX request(like access our api, fetch a list of surveys), if it is the same domain(3000 to 3000), cookies will be included in the request
+    * If it is in different domain(3000 to 5000), cookies won't be included(Security reasons)
+    * By making use of D 5-arch, we avoid this issue as create-react-app proxies it for us(Browser thinks it is in the same domain)
+    * In production, anyway we are in the same domain
+  * The browser does have APIs to send cookies over different domains
+  * But life is easier, when we don't have to worry about these advanced issues
+  2. D 13: Look CORS diagram
+    * Network request to different domain or port, we get Cross Origin Resource Sharing error
+    * We could have worked around this but it's a pain
+    * The proxy saves us in dev mode
+#### Proxy working with Express API in dev mode
+* Diagram link: https://app.diagrams.net/?mode=github#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2FFullstackReactCode%2Fmaster%2Fdiagrams%2F04%2Fdiagrams.xml
+* **D 10-oauth flow: OAUTH flow in Dev**
+* The browser will automatically prepend the domain
+* Request sits pending while the proxy copies the request and sends it to Express API(configured in setupProxy.js)
+* Express looks /auth/google path and sees it requires Google Oauth and tells to please go to google.com and the callback URL specified in the GoogleStrategy
+* Google will send back to localhost:3000 and not 5000
+* Request again runs into proxy
+* The proxy again will pick up the request event though it has an additional /callback path
+* It sends the request to API
+#### Production flow
+* **D 11-oauth: Oauth flow in prod**
