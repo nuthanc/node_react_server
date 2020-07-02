@@ -586,6 +586,7 @@ fetchAlbums();
 * Refactor 2nd argument of GoogleStrategy in passport.js
 
 ### Front End Tech
+* Diagram link: https://app.diagrams.net/?mode=github#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2FFullstackReactCode%2Fmaster%2Fdiagrams%2F04%2Fdiagrams.xml
 * D 14-top:
   * Green box: Backend
   * Blue box: Frontend
@@ -595,3 +596,13 @@ fetchAlbums();
   * So, we also require React-router
   * We want to load up some resources and we need to persist data when navigating between different routes
   * So, we might need **Redux** also
+
+### Client React Setup
+* Delete everything inside client src except serviceWorker and setupProxy.js
+* D 3:
+* D 4:
+```sh
+cd client
+npm i redux react-redux react-router-dom
+```
+* Create index.js inside src dir
