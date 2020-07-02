@@ -581,3 +581,7 @@ const fetchAlbums = async () => {
 }
 fetchAlbums();
 ```
+
+### Refactoring with AsyncAwait
+* Refactor 2nd argument of GoogleStrategy in passport.js
+* 
