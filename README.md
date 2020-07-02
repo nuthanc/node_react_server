@@ -537,3 +537,47 @@ http://localhost:3000/auth/google/callback
 * It sends the request to API
 #### Production flow
 * **D 11-oauth: Oauth flow in prod**
+
+### AsyncAwait Syntax
+* Write a function to retrieve a blob of json,i.e, make an ajax request
+```js
+//Request to rallycoding.herokuapp.com/api/music_albums
+
+function fetchAlbums() {
+  // fetch returns a Promise
+  fetch('https://rallycoding.herokuapp.com/api/music_albums')
+    .then(res => res.json())
+    .then(json => console.log(json))
+  //then statement for notification or for a callback
+  // res.json() also returns a Promise
+}
+fetchAlbums();
+
+```
+* Test this by pasting it in the Browser
+* Diagram link: https://app.diagrams.net/?mode=github#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2FFullstackReactCode%2Fmaster%2Fdiagrams%2F04%2Fdiagrams.xml
+* D 15:
+* New ES2017 syntax:
+  * Identify function that contains asynchronous code
+  * Put async in front of the function
+  * Identify all the promises created within the function and add await in front of it
+  * Assign to intermediate values to contain the resolv result
+```js
+async function fetchAlbums() {
+  const res = await fetch('https://rallycoding.herokuapp.com/api/music_albums') //Promise 1
+  const json = await res.json() //Promise 2
+  
+  console.log(json)
+}
+fetchAlbums();
+```
+* This can be used on arrow functions as well
+```js
+const fetchAlbums = async () => {
+  const res = await fetch('https://rallycoding.herokuapp.com/api/music_albums') //Promise 1
+  const json = await res.json() //Promise 2
+  
+  console.log(json)
+}
+fetchAlbums();
+```
