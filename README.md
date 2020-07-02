@@ -584,4 +584,14 @@ fetchAlbums();
 
 ### Refactoring with AsyncAwait
 * Refactor 2nd argument of GoogleStrategy in passport.js
-* 
+
+### Front End Tech
+* D 14-top:
+  * Green box: Backend
+  * Blue box: Frontend
+* D 2-co:
+  * Definitely need React
+  * Navigation: When user goes to different route, need to show different set of components
+  * So, we also require React-router
+  * We want to load up some resources and we need to persist data when navigating between different routes
+  * So, we might need **Redux** also
