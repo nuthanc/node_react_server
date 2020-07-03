@@ -631,3 +631,9 @@ npm i redux react-redux react-router-dom
 * When any new state is observed, the Provider will inform all of its child components and each Component gets updated
 * npm run dev and check
 
+### The Auth Reducer
+* D 13-reducers:
+  * authReducer
+  * surveyReducer
+* Create reducers dir inside src
+* Create authReducer and index.js
