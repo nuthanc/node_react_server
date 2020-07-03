@@ -650,3 +650,7 @@ npm i redux react-redux react-router-dom
 * Navigations in App.js file
 * Dummy components of Header, Dashboard, SurveyNew and Landing
 
+### Route Configuration
+* BrowserRouter expects atmost 1 child
+* npm run dev to check the Landing page
+
