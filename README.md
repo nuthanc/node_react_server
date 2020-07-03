@@ -641,3 +641,7 @@ npm i redux react-redux react-router-dom
 ### Finishing Reducer Setup
 * Create reducers index.js and import that in Top level index.js
 
+### Why We Care About Auth
+* D 2-com:
+* D 5-react: Routes to access if logged in
+
