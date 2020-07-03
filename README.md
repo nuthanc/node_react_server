@@ -637,3 +637,7 @@ npm i redux react-redux react-router-dom
   * surveyReducer
 * Create reducers dir inside src
 * Create authReducer and index.js
+
+### Finishing Reducer Setup
+* Create reducers index.js and import that in Top level index.js
+
