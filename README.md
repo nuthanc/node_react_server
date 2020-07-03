@@ -645,3 +645,8 @@ npm i redux react-redux react-router-dom
 * D 2-com:
 * D 5-react: Routes to access if logged in
 
+### React Router Setup
+* D 2-com: Routes
+* Navigations in App.js file
+* Dummy components of Header, Dashboard, SurveyNew and Landing
+
