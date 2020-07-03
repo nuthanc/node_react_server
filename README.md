@@ -654,3 +654,6 @@ npm i redux react-redux react-router-dom
 * BrowserRouter expects atmost 1 child
 * npm run dev to check the Landing page
 
+### Matching Routes with Exact
+* Pass exact={true} or exact property
+
