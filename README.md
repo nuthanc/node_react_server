@@ -606,3 +606,7 @@ cd client
 npm i redux react-redux react-router-dom
 ```
 * Create index.js inside src dir
+
+### Installing Root Modules
+* Create components dir in src dir
+* Create App.js inside that
