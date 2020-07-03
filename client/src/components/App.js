@@ -11,8 +11,10 @@ const App = () => {
     <div>
       <BrowserRouter>
         <div>
-          <Route path="/" exact component={Landing} />
-          <Route path="/surveys" component={Dashboard} />
+          <Header />
+          <Route exact path="/" component={Landing} />
+          <Route exact path="/surveys" component={Dashboard} />
+          <Route path="/surveys/new" component={SurveyNew} />
         </div>
       </BrowserRouter>
     </div>

@@ -657,3 +657,7 @@ npm i redux react-redux react-router-dom
 ### Matching Routes with Exact
 * Pass exact={true} or exact property
 
+### Always Visible Components
+* Place Header at the top to show it always
+
+
