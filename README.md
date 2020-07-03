@@ -614,3 +614,20 @@ npm i redux react-redux react-router-dom
 ### Troubleshooting NPM
 * If npm run dev, gives an error from the client side like React scripts, then delete package-lock.json in the client dir
 * Run npm install in client dir
+
+### Redux Review and Setup
+* D 7:
+* D 13-reducers:
+* D 6-redux:
+* D 7-rea: **Flow**
+* D 9-red: Example
+* Redux related changes in index.js of client
+* Arguments to createStore
+  * First argument to createStore given a dummy reducer
+  * Second argument is initial state of the application(Relevant during server-side rendering)
+    * We don't really care of the initial state, so passing empty object
+  * Third argument is the applyMiddleware
+* The Provider is a React Component that knows how to read changes from the Redux store
+* When any new state is observed, the Provider will inform all of its child components and each Component gets updated
+* npm run dev and check
+
