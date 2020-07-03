@@ -610,3 +610,7 @@ npm i redux react-redux react-router-dom
 ### Installing Root Modules
 * Create components dir in src dir
 * Create App.js inside that
+
+### Troubleshooting NPM
+* If npm run dev, gives an error from the client side like React scripts, then delete package-lock.json in the client dir
+* Run npm install in client dir
