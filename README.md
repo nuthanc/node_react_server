@@ -660,4 +660,14 @@ npm i redux react-redux react-router-dom
 ### Always Visible Components
 * Place Header at the top to show it always
 
-
+### Materialize CSS
+* Create Header.js in components 
+* Class based component because of placing 1 or 2 helper functions
+  * For easily organizing code
+* Google search for Materialize CSS
+  * https://materializecss.com/getting-started.html
+* Instead of CDN, let's do npm install this time
+```sh
+cd client
+npm install materialize-css@next
+```
