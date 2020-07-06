@@ -689,3 +689,7 @@ import materializeCSS from 'materialize-css/dist/css/materialize.min.css';
 import 'materialize-css/dist/css/materialize.min.css';
 ```
 * Now check back in Browser after running npm run dev
+
+### Header Design
+* Look from materializecss docs on how to create a Header component
+* In Header.js, make the required changes
