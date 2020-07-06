@@ -671,3 +671,21 @@ npm i redux react-redux react-router-dom
 cd client
 npm install materialize-css@next
 ```
+
+### Webpack with CSS
+* Diagram link: https://app.diagrams.net/?mode=github#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2FFullstackReactCode%2Fmaster%2Fdiagrams%2F04%2Fdiagrams.xml
+* D 16:
+  * Webpack is a Module loader
+  * It takes a bunch of js files and it concatenate and arrange those files to spit 1 or few files
+  * You can also load loaders to webpack that instructs Webpack to handle other types of files
+* In client node_modules->materialize-css->dist->css, you'll find the css file
+* Import it into index.js of client src
+* No need to specify relative path, as it assumes it is a npm module
+* This import statement of materializeCSS doesn't assign any value 
+* So we can condense 
+```js
+import materializeCSS from 'materialize-css/dist/css/materialize.min.css';
+// to
+import 'materialize-css/dist/css/materialize.min.css';
+```
+* Now check back in Browser after running npm run dev
