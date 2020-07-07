@@ -693,3 +693,8 @@ import 'materialize-css/dist/css/materialize.min.css';
 ### Header Design
 * Look from materializecss docs on how to create a Header component
 * In Header.js, make the required changes
+
+### Current User API
+* In App.js file, add class name of container to top-level div
+* In authRoutes.js, route handler for current user
+* D 6: Action creator to make a request to the above mentioned route handler
