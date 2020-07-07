@@ -698,3 +698,15 @@ import 'materialize-css/dist/css/materialize.min.css';
 * In App.js file, add class name of container to top-level div
 * In authRoutes.js, route handler for current user
 * D 6: Action creator to make a request to the above mentioned route handler
+
+### Additional Proxy Rules
+* D 19: **Application Flow between Frontend and Backend**
+```sh
+cd client
+npm install axios redux-thunk
+```
+* In client src index.js, import redux-thunk 
+* Create actions folder
+* Relative path in fetchUser action creator, where in development environment we make use of Proxy and in Production, there is create-react-app server  
+* So check the proxy rule in setupProxy.js
+  * /api/anything else
