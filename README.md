@@ -710,3 +710,19 @@ npm install axios redux-thunk
 * Relative path in fetchUser action creator, where in development environment we make use of Proxy and in Production, there is create-react-app server  
 * So check the proxy rule in setupProxy.js
   * /api/anything else
+
+### Basics of Redux Thunk
+* D 6: Without redux thunk, action creator immediately returns an Action
+* D 20: With Redux thunk
+* Return a function instead of an action in index.js of actions
+* Redux thunk which is wired as middleware will automatically call this function and pass in dispatch and store as arguments
+* v1 version of Action creator
+```js
+const fetchUser = () => {
+  return function () {
+    axios
+      .get('/api/current_user')
+      .then((res) => dispatch({ type: FETCH_USER, payload: res }));
+  };
+};
+```
