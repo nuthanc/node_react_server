@@ -745,3 +745,6 @@ const fetchUser = () => {
 * In authReducer, console log every single action
 * D 19: Application flow
 * We see 4 console logs, the 1st 3 being part of Redux boot up process
+
+### Refactoring to AsyncAwait
+* Using async await and arrow functions
