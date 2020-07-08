@@ -737,3 +737,11 @@ const fetchUser = () => {
 * componentWillMount called before component is mounted
   * Might be called automatically in future versions of React
 * componentDidMount is the preferred location for initial AJAX requests
+* The time difference between componentDidMount and componentWillMount is nil
+
+### Testing FetchUser
+* connect gives Components the ability to call Action Creators
+* Once actions are passed to connect, they are assigned to App components as props
+* In authReducer, console log every single action
+* D 19: Application flow
+* We see 4 console logs, the 1st 3 being part of Redux boot up process
