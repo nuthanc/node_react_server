@@ -726,3 +726,14 @@ const fetchUser = () => {
   };
 };
 ```
+
+### Refactoring the App
+* D 19: Application flow
+* fetchUser should be called as soon the App boots up
+* Where should we add the fetchUser action creator
+* Header component is where it matters whether the User is signed in, but later we would want other components to know as well
+* So the best place is App component
+* Refactor functional component to Class based one
+* componentWillMount called before component is mounted
+  * Might be called automatically in future versions of React
+* componentDidMount is the preferred location for initial AJAX requests
