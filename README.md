@@ -764,3 +764,6 @@ return { auth: auth};
 return { auth };
 ```
 * Helper method of renderContent
+
+### Header Content
+* 

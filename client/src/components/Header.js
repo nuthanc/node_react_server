@@ -3,13 +3,21 @@ import { connect } from 'react-redux';
 
 class Header extends Component {
   renderContent() {
-    switch(this.props.auth) {
+    switch (this.props.auth) {
       case null:
-        return 'Still deciding';
+        return;
       case false:
-        return 'Login';
+        return (
+          <li>
+            <a href="/auth/google">Login with Google</a>
+          </li>
+        );
       default:
-        return 'Logout'
+        return (
+          <li>
+            <a>Logout</a>
+          </li>
+        );
     }
   }
   render() {
@@ -17,11 +25,7 @@ class Header extends Component {
       <nav>
         <div className="nav-wrapper">
           <a className="brand-logo">Emaily</a>
-          <ul className="right">
-            
-              { this.renderContent() };
-            
-          </ul>
+          <ul className="right">{this.renderContent()}</ul>
         </div>
       </nav>
     );
