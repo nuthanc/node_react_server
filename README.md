@@ -748,3 +748,9 @@ const fetchUser = () => {
 
 ### Refactoring to AsyncAwait
 * Using async await and arrow functions
+
+### AuthReducer Return Values
+* import action types in authReducer
+* D 21:
+* action.payload is the User model when the user is logged in
+* Empty string is interpreted as falsy value
