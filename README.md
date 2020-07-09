@@ -766,4 +766,18 @@ return { auth };
 * Helper method of renderContent
 
 ### Header Content
-* 
+* Add proper content in the switch statements
+
+### Redirecting a User on Auth
+* Why we see redirect Error on Logging with Google
+* Go to routes/authRoutes.js
+* Whenever User comes to /auth/google/callback, we are passing Control of the User off the passport authenticate
+* Diagram link: https://app.diagrams.net/?mode=github#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2FFullstackReactCode%2Fmaster%2Fdiagrams%2F02%2Fdiagrams.xml
+* D 4: app.use 3 statements of cookie and passport(They are middlewares)
+  * They intercept every incoming request
+* What **passport.authenticate does**
+  * This is a function(middleware) that takes the incoming request and takes the code out of the URL and goes and fetches the User's profile and then calls our callback in the GoogleStrategy
+  * After Google authentication is finished, it then passes the request on to the next middleware inside the flow
+  * Since no next middleware is defined, it returns Cannot get the route
+* Add an arrow function after passport.authenticate
+* Logout and test the code
