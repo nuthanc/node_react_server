@@ -754,3 +754,13 @@ const fetchUser = () => {
 * D 21:
 * action.payload is the User model when the user is logged in
 * Empty string is interpreted as falsy value
+
+### Accessing State in the Header
+* Hookup Header to redux using connect
+* Since key and value are the same, we can reduce as shown below
+```js
+return { auth: auth};
+// to
+return { auth };
+```
+* Helper method of renderContent
