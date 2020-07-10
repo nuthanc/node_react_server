@@ -780,4 +780,13 @@ return { auth };
   * After Google authentication is finished, it then passes the request on to the next middleware inside the flow
   * Since no next middleware is defined, it returns Cannot get the route
 * Add an arrow function after passport.authenticate
-* Logout and test the code
+* Logout by going to the route manually and test the code
+
+### Redirect on Logout
+* D 10: Need to unset the cookie
+* Diagram Link: https://app.diagrams.net/?mode=github#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2FFullstackReactCode%2Fmaster%2Fdiagrams%2F04%2Fdiagrams.xml
+* D 22: Full HTTP request vs AJAX Request
+  * Full HTTP: a tag
+  * AJAX request will be faster
+* We are gonna go with first approach
+* After this, we need to redirect, so make changes in authRoutes.js
