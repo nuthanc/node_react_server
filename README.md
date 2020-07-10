@@ -790,3 +790,6 @@ return { auth };
   * AJAX request will be faster
 * We are gonna go with first approach
 * After this, we need to redirect, so make changes in authRoutes.js
+
+### Landing Component
+* Create Landing.js
