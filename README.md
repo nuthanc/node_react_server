@@ -793,3 +793,10 @@ return { auth };
 
 ### Landing Component
 * Create Landing.js
+
+### Link Tags
+* Navigate based on auth state
+* Changes in Header
+* D 23:
+  * Completely different domain(Different HTML document): Use a tag. E.g. Login
+  * Navigate around our application: Use Link tags
