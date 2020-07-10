@@ -800,3 +800,7 @@ return { auth };
 * D 23:
   * Completely different domain(Different HTML document): Use a tag. E.g. Login
   * Navigate around our application: Use Link tags
+
+### Client Side Billing
+* D 14: Green-Backend, Blue-Client
+* D 1: Mockup
