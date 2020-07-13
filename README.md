@@ -830,3 +830,17 @@ return { auth };
 cd client
 npm i react-stripe-checkout
 ```
+
+### Stripe API keys
+* The keys need to be in both Front and Backends
+  * Front end requires only the Publishable key
+  * Back end requires both
+* In dev.js and prod.js of config, add the Publishable key and Secret key
+* Add this in Heroku environment too
+  * https://dashboard.heroku.com/apps/shrouded-reaches-12121/settings
+* The config is strictly for the Backend
+* **IN REACT world, any file that gets required in a React project is publicly visible to the outside world**
+* Front end is making use of ES2015 modules
+  * No logic before IMPORT statement
+* Back end is making use of common js modules
+  * Can make use of logic to require files
