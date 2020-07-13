@@ -804,3 +804,10 @@ return { auth };
 ### Client Side Billing
 * D 14: Green-Backend, Blue-Client
 * D 1: Mockup
+
+### Billing Considerations
+* Diagram Link: https://app.diagrams.net/?mode=github#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2FFullstackReactCode%2Fmaster%2Fdiagrams%2F03%2Fdiagrams.xml
+* D 1: Form
+* D 2: Rules of Billing
+  * Outside Payment processor: Stripe(stripe.com)
+  
