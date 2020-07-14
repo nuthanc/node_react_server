@@ -858,3 +858,15 @@ touch .env.development
 touch .env.production
 ```
 * Test this out by console logging in index.js of client
+
+### The Payments Component
+* react-strike-component is doing
+  * When we render that thing as a React component, it shows a button(that says Buy Now)
+  * When they click, a form will appear on the Screen
+* Create Payments.js inside components
+* Add properties to StripeCheckout
+* For amount prop, default is US dollars(In cents)
+* token is expecting a success callback function that gets called with the token we received
+  * It is badly named because in React Components any kind of callback property will be called with onSomething
+* Add a *debugger* statement
+* Show this component in the Header
