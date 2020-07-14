@@ -844,3 +844,17 @@ npm i react-stripe-checkout
   * No logic before IMPORT statement
 * Back end is making use of common js modules
   * Can make use of logic to require files
+
+### Env Variables with React
+* Client side doesn't care about the Secret key
+* Google search for Create react app environment variables
+* https://create-react-app.dev/docs/adding-custom-environment-variables/
+* https://create-react-app.dev/docs/adding-custom-environment-variables/
+  * Start with REACT_APP_
+  * https://create-react-app.dev/docs/adding-custom-environment-variables/#adding-development-environment-variables-in-env
+```sh
+cd client
+touch .env.development
+touch .env.production
+```
+* Test this out by console logging in index.js of client
