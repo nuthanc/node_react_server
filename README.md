@@ -870,3 +870,14 @@ touch .env.production
   * It is badly named because in React Components any kind of callback property will be called with onSomething
 * Add a *debugger* statement
 * Show this component in the Header
+
+### Stripe Tokens
+* Return an array of elements, instead of ul, div and then li
+* npm run dev and it should be Paused in Debugger
+* With the debugger, wanted to show the replacement of process.env with the actual value(Not seen in new React version I guess)
+  * Debugger stopped in bundle.js for Author, whereas it stopped in Payments.js for me
+* Remove the debugger
+* Open up console and check the token log after filling the Stripe form
+* Use this Fake credit card number: 4242 4242 4242 4242
+* id is the property which we really care about in the token object
+
