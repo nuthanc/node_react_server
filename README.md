@@ -881,3 +881,8 @@ touch .env.production
 * Use this Fake credit card number: 4242 4242 4242 4242
 * id is the property which we really care about in the token object
 
+### Payment Fixes
+* D 3-stripe flow:
+* In Header, key is assigned statically as this is a one-time render kind of thing
+* StripeCheckout component takes a name to Give Header to the pop-up
+* Pass a child component to StripeCheckout to customize the button
