@@ -886,3 +886,15 @@ touch .env.production
 * In Header, key is assigned statically as this is a one-time render kind of thing
 * StripeCheckout component takes a name to Give Header to the pop-up
 * Pass a child component to StripeCheckout to customize the button
+
+### Reusing Action Types
+* D 3-stripe flow:
+  * User sees the number of credits in the Header after they successfully pay
+* Closely related events
+  * Fetching the Current User
+  * Getting the current User model
+  * Save it in auth reducer
+* D 4-header:
+  * Reuse info in auth reducer to update the Header
+* In actions index.js file, create handleToken Action creator
+* Here, we do a POST request to the backend server with the token
