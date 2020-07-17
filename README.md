@@ -898,3 +898,10 @@ touch .env.production
   * Reuse info in auth reducer to update the Header
 * In actions index.js file, create handleToken Action creator
 * Here, we do a POST request to the backend server with the token
+
+### Passing the Stripe Token
+* Redux changes in Payments.js
+* No mapStateToProps, as all we care is about the Action creators
+* npm run dev and test
+* Will get a 404 error as there is no Route Handler in the backend yet
+* Chrome Network console, filter by XHR requests after clicking on Add Credits
