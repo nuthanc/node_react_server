@@ -905,3 +905,8 @@ touch .env.production
 * npm run dev and test
 * Will get a 404 error as there is no Route Handler in the backend yet
 * Chrome Network console, filter by XHR requests after clicking on Add Credits
+
+### Post Request Handlers
+* Create billingRoutes.js in routes
+* This will be similar to authRoutes.js where we export the app and require in index.js
+* require billingRoutes will return a function and then it immediately calls that function with app as its argument
