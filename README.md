@@ -921,3 +921,11 @@ touch .env.production
 # In server dir
 npm install stripe
 ```
+
+### BodyParser Middleware
+* Changes in billingRoutes
+* In Chrome Network console for stripe POST request, you can look all the Credit card details
+```sh
+npm install body-parser
+```
+* Require body-parser in index.js to parse incoming requests
