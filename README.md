@@ -929,3 +929,8 @@ npm install stripe
 npm install body-parser
 ```
 * Require body-parser in index.js to parse incoming requests
+
+### Creating a Charge Object
+* console log in billingRoutes
+* npm run dev 
+* Open Chrome Network tab and filter by xhr
