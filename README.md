@@ -910,3 +910,14 @@ touch .env.production
 * Create billingRoutes.js in routes
 * This will be similar to authRoutes.js where we export the app and require in index.js
 * require billingRoutes will return a function and then it immediately calls that function with app as its argument
+
+### Creating Charges
+* We are use library in the backend for stripe too
+* Go to npmjs.com and search for stripe
+* There go to Node API documentation using https://stripe.com/docs/api
+  * Check Charges in Core Resources
+  * Create a Charge
+```sh
+# In server dir
+npm install stripe
+```
