@@ -934,3 +934,20 @@ npm install body-parser
 * console log in billingRoutes
 * npm run dev 
 * Open Chrome Network tab and filter by xhr
+
+### Finalizing a Charge
+* stripe charges returns a Promise(from npmjs.com Stripe docs)
+* Console log charge
+* npm run dev and test again
+* Getting error here: https://stackoverflow.com/questions/53940043/unhandledpromiserejectionwarning-this-error-originated-either-by-throwing-insid
+* Use try catch to solve the above error
+* Another error
+```txt
+StripeInvalidRequestError: As per Indian regulations, export transactions require a customer name and address. More info here: https://stripe.com/docs/india-exports
+```
+* Check https://stripe.com/docs/india-exports
+* Still getting this error
+```txt
+StripeInvalidRequestError: Customer cus_Hgn2nqmtyfBZBR does not have a linked source with ID tok_1H7PRyEUYnaArkKLXMHLuSv3
+```
+* **Solved this issue by adding inr as currency**
