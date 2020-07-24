@@ -951,3 +951,10 @@ StripeInvalidRequestError: As per Indian regulations, export transactions requir
 StripeInvalidRequestError: Customer cus_Hgn2nqmtyfBZBR does not have a linked source with ID tok_1H7PRyEUYnaArkKLXMHLuSv3
 ```
 * **Solved this issue by adding inr as currency**
+
+### Adding Credits to a User
+* D 5-charges:
+* In models User.js file, add credits with default value of 0
+  * To do this, we pass an object to credits
+* Need to save to persist in the db, which is an async request
+
