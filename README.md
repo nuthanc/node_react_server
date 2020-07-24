@@ -958,3 +958,14 @@ StripeInvalidRequestError: Customer cus_Hgn2nqmtyfBZBR does not have a linked so
   * To do this, we pass an object to credits
 * Need to save to persist in the db, which is an async request
 
+### Requiring Authentication
+* Test by running npm run dev and checking the Chrome Network tab
+* User has 5 credits now
+* Currently in our Route handler of /api/stripe, we are not checking whether the User is logged in or not
+* Taking a naive approach 
+```js
+if (!req.user) {
+  return res.status(401).send({ error: 'You must log in!' });
+}
+```
+* But there might be many locations requiring this logic
