@@ -969,3 +969,14 @@ if (!req.user) {
 }
 ```
 * But there might be many locations requiring this logic
+
+### Route-Specific Middlewares
+* Diagram link: https://app.diagrams.net/?mode=github#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2FFullstackReactCode%2Fmaster%2Fdiagrams%2F02%2Fdiagrams.xml
+* D 4: How Express works
+* Diagram Link: https://app.diagrams.net/?mode=github#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2FFullstackReactCode%2Fmaster%2Fdiagrams%2F03%2Fdiagrams.xml
+* D 6-req: Require login
+* Passport middleware is where the current user is assigned to the request body
+* We want this check of User is logged in only in some particular Route handlers
+* Create middlewares dir and create requireLogin.js file
+* In billingRoutes, we don't call requireLogin because we don't want it to be called as soon as express loads or boots up
+* It is called internally by express when it goes to that route
