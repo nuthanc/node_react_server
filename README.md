@@ -983,3 +983,7 @@ if (!req.user) {
 
 ### Displaying Credit Quantity
 * In client Header.js, make the changes
+
+### Updating Credits
+* D 4-header:
+* Add credits and test again
