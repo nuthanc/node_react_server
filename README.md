@@ -980,3 +980,6 @@ if (!req.user) {
 * Create middlewares dir and create requireLogin.js file
 * In billingRoutes, we don't call requireLogin because we don't want it to be called as soon as express loads or boots up
 * It is called internally by express when it goes to that route
+
+### Displaying Credit Quantity
+* In client Header.js, make the changes
