@@ -987,3 +987,18 @@ if (!req.user) {
 ### Updating Credits
 * D 4-header:
 * Add credits and test again
+
+### Express with Create-React-App in Production
+* Diagram link: https://app.diagrams.net/?mode=github#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2FFullstackReactCode%2Fmaster%2Fdiagrams%2F01%2Fdiagrams.xml
+* D 5-archi: Dev mode
+  * create-react-app responsible for serving the assets(like html, css and js)
+* D 7-archi: Production
+  * Challenge for express side of our App to serve up the assets
+```sh
+cd client
+npm run build
+# Creating an optimized production build..
+```
+* Diagram link: https://app.diagrams.net/?mode=github#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2FFullstackReactCode%2Fmaster%2Fdiagrams%2F03%2Fdiagrams.xml
+* D 8-options: **Routes that express has to be aware of**
+  * /surveys not defined in express server but React-router config
