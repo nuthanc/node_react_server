@@ -1010,3 +1010,14 @@ npm run build
 * The next get request is a catch all 
 * So first is a check for static files and responding with the matching file
 * Then is a catch all where index.html is returned
+
+### Deployment Options
+* Need to build project again if there are any changes to the client src files
+* Heroku is a **git based workflow**
+* D 9-where: 
+  * Option 1 breaks convention
+  * Option 2 where build process executed on Heroku servers
+    * **all** dependencies where only some are used in the Production environment(Not required: webpack, babel, dependencies of babel and webpack)
+    * The development packages just exist on the Hard drive and won't be used by our Application in Heroku
+    * Option 3 is overkill for our Application
+    
