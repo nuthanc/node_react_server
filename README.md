@@ -1020,4 +1020,17 @@ npm run build
     * **all** dependencies where only some are used in the Production environment(Not required: webpack, babel, dependencies of babel and webpack)
     * The development packages just exist on the Hard drive and won't be used by our Application in Heroku
     * Option 3 is overkill for our Application
-    
+
+### Adding in a Heroku Build Step
+* D 10-building:
+* Google Search Heroku Node.js support
+  * https://devcenter.heroku.com/articles/nodejs-support#customizing-the-build-process
+* heroku-postbuild over postinstall because it will run if we run npm install on our local machine
+* Also see devDependencies on the doc
+* Changes in package.json in root server dir
+* Heroku doesn't care at all about the package.json in the client dir
+  * Env set only during the duration of heroku-postbuild command
+* In server dir, git status
+```sh
+git add .
+git commit -m "Added billing and client side app!"
