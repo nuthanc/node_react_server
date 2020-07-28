@@ -1002,3 +1002,11 @@ npm run build
 * Diagram link: https://app.diagrams.net/?mode=github#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2FFullstackReactCode%2Fmaster%2Fdiagrams%2F03%2Fdiagrams.xml
 * D 8-options: **Routes that express has to be aware of**
   * /surveys not defined in express server but React-router config
+
+### Routing in Production
+* D 8-options:
+* In root index.js, add some code to make Express behaves properly in Production environment
+* app.use of express.static is when the above routes don't match and if there a request for assests in client/build
+* The next get request is a catch all 
+* So first is a check for static files and responding with the matching file
+* Then is a catch all where index.html is returned
