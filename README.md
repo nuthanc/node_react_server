@@ -1034,3 +1034,13 @@ npm run build
 ```sh
 git add .
 git commit -m "Added billing and client side app!"
+git push heroku master
+```
+
+### Testing Deployment
+* D 8-options:
+* When moved to /surveys in the browser, the entire page reloads
+  * Entirely new http request to Express server
+  * It loads up the HTML document
+  * Inside the html document is a script tag that points to main.js
+  * The server responds with a .js file for the above request and the entire React application boots up
