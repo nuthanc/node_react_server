@@ -1049,3 +1049,7 @@ git push heroku master
 * Diagram Link: https://app.diagrams.net/?mode=github#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2FFullstackReactCode%2Fmaster%2Fdiagrams%2F05%2Fdiagrams.xml
 * D 1-surveys:
 * D 3-sample:
+
+### Server Routes
+* D 2-survey: Routes
+
