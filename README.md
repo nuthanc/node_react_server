@@ -1114,3 +1114,19 @@ git push heroku master
 * D 3:
 * D 15: Flow
 * D 16: Mailer
+
+### Identifying Unique Users
+* D 17-r: Bad approach
+  * Separate Mailer and separate HTTP request
+* D 18: Good approach
+  * 1 Mailer and 1 Network request
+* D 19: Downside to the above approach
+  * Mailer contains identical content to every single User
+* Email provider: sendgrid.com
+  * https://app.sendgrid.com/guide
+* D 20:
+* D 21: Flow
+  * The very last step of Sendgrid sending a message to our server, this process is a webhook
+  * Webhook is some outside API which is facilitating some process, and gives our App some sort of callback that an event just occured
+* The /api/surveys/webhooks POST is a Route where sendgrid sends the notifications 
+
