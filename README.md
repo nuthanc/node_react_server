@@ -1106,3 +1106,11 @@ git push heroku master
   * But need to wrap in () to make sure it is a shortened object syntax instead of start of a function body
 * id property of user is automatically created by Mongo
 * Just an in memory survey and not yet persisted in Mongo db
+* **Not sent immediately because we want to save it only when email was sent successfully**
+
+### Creating Mailers
+* Diagram Link: https://app.diagrams.net/?mode=github#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2FFullstackReactCode%2Fmaster%2Fdiagrams%2F05%2Fdiagrams.xml
+* D 2:
+* D 3:
+* D 15: Flow
+* D 16: Mailer
