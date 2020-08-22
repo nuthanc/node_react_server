@@ -1130,3 +1130,10 @@ git push heroku master
   * Webhook is some outside API which is facilitating some process, and gives our App some sort of callback that an event just occured
 * The /api/surveys/webhooks POST is a Route where sendgrid sends the notifications 
 
+### SendGrid setup
+* https://app.sendgrid.com/guide
+* Go to settings -> API keys
+* Create API Key with full access
+* Create sendGridKey in dev.js and prod.js(Env in heroku)
+* npm install sendgrid in server
+* npm run dev
