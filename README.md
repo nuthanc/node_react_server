@@ -1084,3 +1084,10 @@ git push heroku master
 * Import this in index.js
 * Need to check User is logged in and they have enough credits
 * So require middleware for Login
+
+### Verifying Minimum Credits
+* Creating middleware because sometime in the future we might we want to check if the User is logged in and also has sufficient credits
+* Create requireCredits.js
+* Status code not important, but anything in the 400 range(checkout status code definitions)
+* 403 not exactly meeting the req, but close enough
+* Import requireCredits in Survey.js
