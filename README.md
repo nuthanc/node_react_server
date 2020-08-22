@@ -1094,3 +1094,15 @@ git push heroku master
 
 ### Creating Surveys
 * Instead of requiring models/Survey.js file, we create a model for ease in Testing(Issue of running tests with node and mongoose if we require Survey model)
+
+### Creating Subdoc Collections
+* D 14-sur: For recepients property
+  * Array of strings to array of objects
+* D 13-map:
+  * Initially passed as strings from Front-end
+  * So need to use split function to convert to array of strings
+  * map((email) => { return {email: email}})
+  * Shortened to map((email) =>  {email})
+  * But need to wrap in () to make sure it is a shortened object syntax instead of start of a function body
+* id property of user is automatically created by Mongo
+* Just an in memory survey and not yet persisted in Mongo db
