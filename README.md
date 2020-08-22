@@ -1050,9 +1050,14 @@ git push heroku master
 * D 1-surveys:
 * D 3-sample:
 
-### Server Routes
+### Survey Routes
 * D 2-survey: Routes
 
-### Server Model
+### Survey Model
 * D 4-survey model:
 * Create a new model class for Surveys and require in index.js
+
+### Model Deficiencies
+* D 6:
+* D 7-yesno:
+* D 8-duplicates:
