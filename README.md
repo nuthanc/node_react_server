@@ -1069,4 +1069,8 @@ git push heroku master
 * D 12-sur: Limit exceeds if we do this 
   * Physical limitations of mongodb
 
+### Setting up SubDocs
+* Create Recepient.js model file
+* Rather than registering Recepient with mongoose, we are gonna export it
+* Import this in Survey.js
 
