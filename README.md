@@ -1053,3 +1053,6 @@ git push heroku master
 ### Server Routes
 * D 2-survey: Routes
 
+### Server Model
+* D 4-survey model:
+* Create a new model class for Surveys and require in index.js
