@@ -1077,3 +1077,10 @@ git push heroku master
 ### Relationship Fields
 * _user to setup relationship between User and Schema
 * Underscore not required, but it is convention to indicate relationship field
+
+### Survey Creation Route Handler
+* D 2-survey: POST
+* Create surveyRoutes.js inside routes
+* Import this in index.js
+* Need to check User is logged in and they have enough credits
+* So require middleware for Login
