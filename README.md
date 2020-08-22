@@ -1074,3 +1074,6 @@ git push heroku master
 * Rather than registering Recepient with mongoose, we are gonna export it
 * Import this in Survey.js
 
+### Relationship Fields
+* _user to setup relationship between User and Schema
+* Underscore not required, but it is convention to indicate relationship field
