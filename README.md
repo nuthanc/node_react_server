@@ -1061,3 +1061,12 @@ git push heroku master
 * D 6:
 * D 7-yesno:
 * D 8-duplicates:
+
+### Limitation of Subdocument Collections
+* D 9-subdoc: Ownership relationship
+* D 10-sub: Why don't we make this?
+* D 11-max: Size limit is 4mb per document 
+* D 12-sur: Limit exceeds if we do this 
+  * Physical limitations of mongodb
+
+
