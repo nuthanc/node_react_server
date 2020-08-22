@@ -1142,3 +1142,8 @@ git push heroku master
 * D 22:
 * Create Mailer.js in services dir
   * In capitals, because it is exporting
+
+### Mailer in Use
+* To understand useCase of Mailer, assume it is complete and require it in surveyRoutes
+* D 22:
+* New folder of emailTemplates in services dir
