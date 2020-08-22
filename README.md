@@ -1091,3 +1091,6 @@ git push heroku master
 * Status code not important, but anything in the 400 range(checkout status code definitions)
 * 403 not exactly meeting the req, but close enough
 * Import requireCredits in Survey.js
+
+### Creating Surveys
+* Instead of requiring models/Survey.js file, we create a model for ease in Testing(Issue of running tests with node and mongoose if we require Survey model)
