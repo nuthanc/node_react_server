@@ -1137,3 +1137,8 @@ git push heroku master
 * Create sendGridKey in dev.js and prod.js(Env in heroku)
 * npm install sendgrid in server
 * npm run dev
+
+### Mailer Setup
+* D 22:
+* Create Mailer.js in services dir
+  * In capitals, because it is exporting
