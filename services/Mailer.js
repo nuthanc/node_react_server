@@ -10,6 +10,24 @@ class Mailer extends helper.Mail {
     this.subject = subject;
     this.body = new helper.Content('text/html', content);
     this.recepients = this.formatAddresses(recepients);
+
+    this.addContent(this.body);
+    this.addClickTracking();
+    this.addRecipients();
+  }
+
+  formatAddresses(recepients) {
+    return recepients.map(({ email }) => {
+      return new helper.Email(email);
+    });
+  }
+
+  addClickTracking() {
+    const trackingSettings = new helper.TrackingSettings();
+    const clickTracking = new helper.ClickTracking(true, true);
+    
+    trackingSettings.setClickTracking(clickTracking);
+    this.addTrackingSettings(trackingSettings);
   }
 }
 

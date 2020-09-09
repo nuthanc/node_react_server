@@ -1150,3 +1150,10 @@ git push heroku master
 
 ### Mailer Constructor
 * Changes in Mailer.js file
+
+### Boilerplate for Sending Emails
+* Diagram link: https://app.diagrams.net/?mode=github#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2FFullstackReactCode%2Fmaster%2Fdiagrams%2F05%2Fdiagrams.xml
+* D 14: Recepients - Array of objects
+* You need to have paranthesis while doing destructuring in arrow function
+* D 21: Click tracking
+  * Enables step 2
