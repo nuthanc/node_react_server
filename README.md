@@ -1147,3 +1147,6 @@ git push heroku master
 * To understand useCase of Mailer, assume it is complete and require it in surveyRoutes
 * D 22:
 * New folder of emailTemplates in services dir
+
+### Mailer Constructor
+* Changes in Mailer.js file
