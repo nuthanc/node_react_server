@@ -1160,3 +1160,6 @@ git push heroku master
 
 ### More Mailer Properties
 * Add another method
+
+### Sending SendGrid Emails
+* D 22:
