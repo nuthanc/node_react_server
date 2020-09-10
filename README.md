@@ -1157,3 +1157,6 @@ git push heroku master
 * You need to have paranthesis while doing destructuring in arrow function
 * D 21: Click tracking
   * Enables step 2
+
+### More Mailer Properties
+* Add another method
