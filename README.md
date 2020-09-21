@@ -1163,3 +1163,28 @@ git push heroku master
 
 ### Sending SendGrid Emails
 * D 22:
+
+### Testing Email Sending
+* send in surveyRoutes.js
+* OAuth flow with Postman is a pain in the Neck
+* So, we are doing differently in client
+* Temporary code in client src index.js
+* Run npm run dev
+* In Chrome console, type axios and you should be able to see the axios library 
+* By doing this, we can make POST request by including the cookies included at localhost:3000
+```js
+const survey = { title: 'my title', subject: 'my subject', recipients: 'rovanova.nuthan@gmail.com', body: 'here is the body of the email'};
+
+axios.post('/api/surveys', survey);
+
+// Some cookie problem
+// Error occurred while trying to proxy request /api/surveys from localhost:3000 to http://localhost:5000 (ECONNRESET) (https://nodejs.org/api/errors.html#errors_common_system_errors)
+```
+```sh
+#Need to export the below
+export NODE_TLS_REJECT_UNAUTHORIZED='0'
+```
+* Finally was able to send mail
+  * Had to add catch block for sgApi call which returned a Promise
+  * This enabled to log the error
+* Remove axios code later in client src index.js

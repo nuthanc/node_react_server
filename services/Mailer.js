@@ -3,22 +3,22 @@ const helper = sendgrid.mail;
 const keys = require('../config/keys');
 
 class Mailer extends helper.Mail {
-  constructor({ subject, recepients }, content) {
+  constructor({ subject, recipients }, content) {
     super();
 
     this.sgApi = sendgrid(keys.sendGridKey);
-    this.from_email = new helper.Email('no-reply@emaily.com');
+    this.from_email = new helper.Email('nuthanchandra1997@gmail.com');
     this.subject = subject;
     this.body = new helper.Content('text/html', content);
-    this.recepients = this.formatAddresses(recepients);
+    this.recipients = this.formatAddresses(recipients);
 
     this.addContent(this.body);
     this.addClickTracking();
     this.addRecipients();
   }
 
-  formatAddresses(recepients) {
-    return recepients.map(({ email }) => {
+  formatAddresses(recipients) {
+    return recipients.map(({ email }) => {
       return new helper.Email(email);
     });
   }
@@ -33,7 +33,7 @@ class Mailer extends helper.Mail {
 
   addRecipients() {
     const personalize = new helper.Personalization();
-    this.recepients.forEach(receipent => {
+    this.recipients.forEach(receipent => {
       personalize.addTo(receipent);
     });
     this.addPersonalization(personalize);
@@ -45,9 +45,18 @@ class Mailer extends helper.Mail {
       path: '/v3/mail/send',
       body: this.toJSON()
     });
-
-  const response = this.sgApi.API(request);
-  return response;
+    console.log("Request is", request);
+    const response = this.sgApi
+      .API(request)
+      .catch((errors) => {
+        for (const property in errors.response) {
+          console.log(`Property is ${property}`)
+          console.log(`${errors.response[property]}`)
+        }
+        console.log(errors.response.body)
+        return;
+      });
+    return response;
   }
 }
 
