@@ -1185,6 +1185,16 @@ axios.post('/api/surveys', survey);
 export NODE_TLS_REJECT_UNAUTHORIZED='0'
 ```
 * Finally was able to send mail
+  * Found in Promotions tab
   * Had to add catch block for sgApi call which returned a Promise
   * This enabled to log the error
 * Remove axios code later in client src index.js
+
+### Improving the Email Template
+* No escape characters for new line when we use template strings
+* npm run dev
+```js
+const survey = { title: 'Feedback Survey', subject: 'Give us feedback', recipients: 'rovanova.nuthan@gmail.com', body: 'We would love to hear if you enjoyed our services'};
+axios.post('/api/surveys', survey);
+```
+* If you Inspect the Yes or No a tags, you see custom href by sendgrid
