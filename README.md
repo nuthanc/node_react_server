@@ -1209,3 +1209,8 @@ axios.post('/api/surveys', survey);
 # Export the below to avoid self-signed certificate error
 export NODE_TLS_REJECT_UNAUTHORIZED='0'
 ```
+
+### Verifying Sendgrid Click Tracking
+* Click on Yes on one of the email and check the Sendgrid dashboard
+* https://app.sendgrid.com/
+* Check Activity in the Sidebar
