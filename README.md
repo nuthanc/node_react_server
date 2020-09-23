@@ -1194,7 +1194,18 @@ export NODE_TLS_REJECT_UNAUTHORIZED='0'
 * No escape characters for new line when we use template strings
 * npm run dev
 ```js
-const survey = { title: 'Feedback Survey', subject: 'Give us feedback', recipients: 'rovanova.nuthan@gmail.com', body: 'We would love to hear if you enjoyed our services'};
+const survey = { title: 'Feedback Survey', subject: 'Give us another feedback', recipients: 'rovanova.nuthan@gmail.com', body: 'We would love to hear if you enjoyed our services'};
 axios.post('/api/surveys', survey);
 ```
 * If you Inspect the Yes or No a tags, you see custom href by sendgrid
+
+### Polish in the Route Handler
+* D 15:
+* Since mailer.send is an async function, make the arrow function passed to app.post async as well
+* Since current User model can be accessed by req.user(automatically setup by Passport), we can save it to database as well
+* Status 422: Unprocessable entity
+* Check this using npm run dev
+```sh
+# Export the below to avoid self-signed certificate error
+export NODE_TLS_REJECT_UNAUTHORIZED='0'
+```

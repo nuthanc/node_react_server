@@ -26,14 +26,14 @@ class Mailer extends helper.Mail {
   addClickTracking() {
     const trackingSettings = new helper.TrackingSettings();
     const clickTracking = new helper.ClickTracking(true, true);
-    
+
     trackingSettings.setClickTracking(clickTracking);
     this.addTrackingSettings(trackingSettings);
   }
 
   addRecipients() {
     const personalize = new helper.Personalization();
-    this.recipients.forEach(receipent => {
+    this.recipients.forEach((receipent) => {
       personalize.addTo(receipent);
     });
     this.addPersonalization(personalize);
@@ -43,19 +43,10 @@ class Mailer extends helper.Mail {
     const request = this.sgApi.emptyRequest({
       method: 'POST',
       path: '/v3/mail/send',
-      body: this.toJSON()
+      body: this.toJSON(),
     });
-    console.log("Request is", request);
-    const response = this.sgApi
-      .API(request)
-      .catch((errors) => {
-        for (const property in errors.response) {
-          console.log(`Property is ${property}`)
-          console.log(`${errors.response[property]}`)
-        }
-        console.log(errors.response.body)
-        return;
-      });
+    console.log('Request is', request);
+    const response = await this.sgApi.API(request);
     return response;
   }
 }
