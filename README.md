@@ -1194,7 +1194,7 @@ export NODE_TLS_REJECT_UNAUTHORIZED='0'
 * No escape characters for new line when we use template strings
 * npm run dev
 ```js
-const survey = { title: 'Feedback Survey', subject: 'Give us another feedback', recipients: 'rovanova.nuthan@gmail.com', body: 'We would love to hear if you enjoyed our services'};
+const survey = { title: 'Feedback Survey', subject: 'Ola oh oh', recipients: 'rovanova.nuthan@gmail.com', body: 'Football theme'};
 axios.post('/api/surveys', survey);
 ```
 * If you Inspect the Yes or No a tags, you see custom href by sendgrid
@@ -1214,3 +1214,14 @@ export NODE_TLS_REJECT_UNAUTHORIZED='0'
 * Click on Yes on one of the email and check the Sendgrid dashboard
 * https://app.sendgrid.com/
 * Check Activity in the Sidebar
+
+### Feedback for User Feedback
+* In surveyTemplate, for anchor tag href we have used localhost
+* But for production, this needs to be changed
+* Previously, we made the browser to figure out the domain by using relative path
+* But the html in surveyTemplate is gonna be rendered inside a User's email inbox
+* There, we can't rely upon Browser cause if it's in gmail, then they will be sent to gmail/surveys etc
+* So add this logic in dev.js and prod.js(Also in heroku domain)
+* Add another route in surveyRoutes.js
+* **Thanks for voting** not working, maybe proxy problem
+* Had to change localhost:3000 to 5000 in dev.js
