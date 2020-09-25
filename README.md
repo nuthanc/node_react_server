@@ -1235,3 +1235,6 @@ export NODE_TLS_REJECT_UNAUTHORIZED='0'
 * Check https://materializecss.com/
 * https://materializecss.com/floating-action-button.html
 * Add link of icons in public index.html
+
+### Navigation with the Link Tag
+* Import and use Link instead of a tag
