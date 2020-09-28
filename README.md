@@ -1245,3 +1245,11 @@ export NODE_TLS_REJECT_UNAUTHORIZED='0'
 * Review step for form 
 * SurveyNew form: Transition between SurveyReview and SurveyForm
 
+### Purpose of Redux Form
+* Diagram Link: https://app.diagrams.net/?mode=github#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2FFullstackReactCode%2Fmaster%2Fdiagrams%2F06%2Fdiagrams.xml
+* D 3: Component structure
+  * App -> SurveyNew -> SurveyForm and SurveyFormReview
+  * SurveyForm -> SurveyField
+* D 4-form: Form with Redux
+* Redux form is saving us the trouble of action creators and reducers
+* D 5: Redux form
