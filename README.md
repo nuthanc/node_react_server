@@ -1253,3 +1253,15 @@ export NODE_TLS_REJECT_UNAUTHORIZED='0'
 * D 4-form: Form with Redux
 * Redux form is saving us the trouble of action creators and reducers
 * D 5: Redux form
+
+### Redux Form Setup
+```sh
+cd client
+npm install redux-form
+cd ..
+npm run dev
+```
+* Doc link: https://redux-form.com/8.2.2/examples/wizard/
+* Import reducer from authReducer
+* reduxForm has to be assigned to a special key called form
+* Create surveys folder to house all survey related components
