@@ -1265,3 +1265,7 @@ npm run dev
 * Import reducer from authReducer
 * reduxForm has to be assigned to a special key called form
 * Create surveys folder to house all survey related components
+
+### The ReduxForm Helper
+* Changes in SurveyForm
+* reduxForm is similar to connect function
