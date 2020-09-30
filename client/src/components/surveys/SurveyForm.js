@@ -5,11 +5,10 @@ import { Field, reduxForm } from 'redux-form';
 class SurveyForm extends Component {
   render() {
     return (
-      <div>
-        <form>
-          <input />
-        </form>
-      </div>
+      <form onSubmit={this.props.handleSubmit((data) => console.log(data))}>
+        <Field name="surveyTitle" type="text" component="input"/>
+        <button type="submit">Submit</button>
+      </form>
     );
   }
 }

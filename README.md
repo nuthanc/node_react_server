@@ -1269,3 +1269,7 @@ npm run dev
 ### The ReduxForm Helper
 * Changes in SurveyForm
 * reduxForm is similar to connect function
+
+### Redux Form in Practice
+* name property in Field acts as key to extract the data
+* prop of handleSubmit is provided by reduxForm just like connect provides a set of props
