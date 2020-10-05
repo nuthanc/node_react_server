@@ -11,7 +11,6 @@ class SurveyForm extends Component {
           name="title"
           type="text"
           component={SurveyField}
-          placeholder="Title"
         />
       </div>
     );

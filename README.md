@@ -1281,3 +1281,7 @@ npm run dev
 * Why input in SurveyField when we can provide input as value to component property of Field component
   * Benefit of wiring Event handlers
 * Redux form: Added benefit of wiring of Event handlers to the form elements, i.e no need to wire it manually
+
+### Wiring up Custom Fields
+* Since SurveyField is being rendered by the Field tag, it has a bunch of props passed down to it
+* console log props to check what is passed down to it

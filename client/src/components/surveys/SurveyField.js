@@ -3,10 +3,10 @@
 import React from 'react'
 
 
-const SurveyField = ({fields}) => {
+const SurveyField = ({input}) => {
   return (
     <div>
-      <input />
+      <input {...input} />
     </div>
   );
 }
