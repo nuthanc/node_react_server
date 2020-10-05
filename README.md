@@ -1273,3 +1273,11 @@ npm run dev
 ### Redux Form in Practice
 * name property in Field acts as key to extract the data
 * prop of handleSubmit is provided by reduxForm just like connect provides a set of props
+
+### Custom Field Components
+* Why separate SurveyFields
+  * To avoid duplication of 4 labels and 4 Fields in SurveyForm.js
+* Provide custom component to component property of Fields
+* Why input in SurveyField when we can provide input as value to component property of Field component
+  * Benefit of wiring Event handlers
+* Redux form: Added benefit of wiring of Event handlers to the form elements, i.e no need to wire it manually
