@@ -1285,3 +1285,6 @@ npm run dev
 ### Wiring up Custom Fields
 * Since SurveyField is being rendered by the Field tag, it has a bunch of props passed down to it
 * console log props to check what is passed down to it
+
+### DRY'ing Up Fields
+* Field component with different props
