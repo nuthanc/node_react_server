@@ -1,6 +1,7 @@
 // SurveyForm shows a form for a user to add input
 import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
+import { Link } from 'react-router-dom';
 import _ from 'lodash';
 import SurveyField from './SurveyField';
 
@@ -27,7 +28,14 @@ class SurveyForm extends Component {
     return (
       <form onSubmit={this.props.handleSubmit((data) => console.log(data))}>
         {this.renderFields()}
-        <button type="submit">Submit</button>
+        <Link to="/surveys" className="red left white-text btn-flat">
+          Cancel
+          <i className="material-icons right">cancel</i>
+        </Link>
+        <button type="submit" className="teal right white-text btn-flat">
+          Next
+          <i className="material-icons right">arrow_forward</i>
+        </button>
       </form>
     );
   }

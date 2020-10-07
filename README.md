@@ -1275,6 +1275,8 @@ npm run dev
 * prop of handleSubmit is provided by reduxForm just like connect provides a set of props
 
 ### Custom Field Components
+* Diagram Link: https://app.diagrams.net/?mode=github#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2FFullstackReactCode%2Fmaster%2Fdiagrams%2F06%2Fdiagrams.xml
+* D 1-form:
 * Why separate SurveyFields
   * To avoid duplication of 4 labels and 4 Fields in SurveyForm.js
 * Provide custom component to component property of Fields
@@ -1315,3 +1317,7 @@ renderFields() {
     ));
   }
 ```
+
+### Styling the Form
+* D 1-form:
+* Make submit button nicer
