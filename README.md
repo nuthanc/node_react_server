@@ -1288,3 +1288,30 @@ npm run dev
 
 ### DRY'ing Up Fields
 * Field component with different props
+
+### Fields from Config
+* I used this
+```js
+renderFields() {
+    return (
+      <div>
+        {FIELDS.map(({ name, label }) => (
+          <Field
+            name={name}
+            label={label}
+            type="text"
+            component={SurveyField}
+          />
+        ))}
+      </div>
+    );
+  }
+```
+* Instructor's implementation
+```js
+renderFields() {
+    return _.map(FIELDS, ({ name, label }) => (
+      <Field name={name} label={label} type="text" component={SurveyField} />
+    ));
+  }
+```
