@@ -1338,3 +1338,14 @@ export default reduxForm({
 // And since value is same as key, key alone is sufficient
 validate
 ```
+
+### Showing Validation Errors
+* By having the errors object have the same property as the name of the Field, redux-form automatically passes it to the Field as a prop called meta
+* Console log meta and check
+  * It has many useful properties like touched, error etc
+* If we have just the meta.error after the input, we see the Error as soon the application renders
+  * This is because the when the form is rendered validation function is automatically run 
+* ES6 nested destructuring
+```js
+{input, label, meta: {touched, error}}
+```
