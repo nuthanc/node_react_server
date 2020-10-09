@@ -11,10 +11,7 @@ const FIELDS = [
   { name: 'body', label: 'Email body' },
   { name: 'emails', label: 'Recipient List' },
 ];
-const email = (value) =>
-  value && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)
-    ? 'Invalid email address'
-    : undefined;
+
 class SurveyForm extends Component {
   renderFields() {
     return _.map(FIELDS, ({ name, label }) => {
@@ -27,9 +24,7 @@ class SurveyForm extends Component {
           component={SurveyField}
         />
       );
-    }
-      
-    );
+    });
   }
 
   render() {
@@ -51,9 +46,13 @@ class SurveyForm extends Component {
 
 function validate(values) {
   const errors = {};
-  if(!values.title) {
-    errors.title = 'You must provide a title'
-  }
+
+  _.each(FIELDS, ({ name }) => {
+    if (!values[name]) {
+      errors[name] = 'You should provide a value';
+    }
+  });
+
   return errors;
 }
 

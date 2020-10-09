@@ -1349,3 +1349,7 @@ validate
 ```js
 {input, label, meta: {touched, error}}
 ```
+
+### Generalizing Field Validation
+* Use lodash each method instead of writing condition for each field separately
+* Use NoValueError for each object in the FIELDS list for custom error message
