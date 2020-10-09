@@ -1321,3 +1321,20 @@ renderFields() {
 ### Styling the Form
 * D 1-form:
 * Make submit button nicer
+
+### Form Validation
+* validate option to reduxForm call
+* A function needs to be passed under the key validate
+  * This function will be automatically called when the form is submitted
+  * validate needs to return an object
+  * If the object is empty, there are no errors
+  * But if the object is not empty, it will not allow us to submit the form
+```js
+export default reduxForm({
+  validate: validate,
+  form: 'surveyForm',
+})(SurveyForm);
+
+// And since value is same as key, key alone is sufficient
+validate
+```

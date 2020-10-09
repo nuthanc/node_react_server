@@ -11,17 +11,25 @@ const FIELDS = [
   { name: 'body', label: 'Email body' },
   { name: 'emails', label: 'Recipient List' },
 ];
+const email = (value) =>
+  value && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)
+    ? 'Invalid email address'
+    : undefined;
 class SurveyForm extends Component {
   renderFields() {
-    return _.map(FIELDS, ({ name, label }) => (
-      <Field
-        key={name}
-        name={name}
-        label={label}
-        type="text"
-        component={SurveyField}
-      />
-    ));
+    return _.map(FIELDS, ({ name, label }) => {
+      return (
+        <Field
+          key={name}
+          name={name}
+          label={label}
+          type="text"
+          component={SurveyField}
+        />
+      );
+    }
+      
+    );
   }
 
   render() {
@@ -41,6 +49,13 @@ class SurveyForm extends Component {
   }
 }
 
+function validate(values) {
+  const errors = {};
+  if(values)
+  return errors;
+}
+
 export default reduxForm({
+  validate,
   form: 'surveyForm',
 })(SurveyForm);
