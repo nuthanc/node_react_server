@@ -1353,3 +1353,23 @@ validate
 ### Generalizing Field Validation
 * Use lodash each method instead of writing condition for each field separately
 * Use NoValueError for each object in the FIELDS list for custom error message
+
+### Validating Emails
+* Check this link: https://redux-form.com/8.2.2/examples/fieldlevelvalidation/ for email regex
+* Check condition for multiple and single emails
+* My way of validating emails
+```js
+if (name === 'emails' && values[name]) {
+      const emails = values[name].split(',');
+      _.each(emails, (email) => {
+        if (
+          !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email.trim())
+        ) {
+          errors[name] = `${email.trim()} is invalid`;
+        }
+      });
+    }
+```
+* Diagram Link: https://app.diagrams.net/?mode=github#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2FFullstackReactCode%2Fmaster%2Fdiagrams%2F06%2Fdiagrams.xml
+* D 6-emails:
+* The email validation logic is made into a separate file so that other components may utilize this in the future
