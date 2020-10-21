@@ -1386,3 +1386,9 @@ re.test(email) === false
 * We have used === false for better readability in the above expression
 * When we run, we get Cannot read property 'split' of undefined
   * When the form is first built by redux form, validation automatically runs one time
+
+#### Project of removing just the trailing comma(,) and space
+* Add regex below to strip the trailing comma
+```js
+emails.replace(/,\s*$/, "")
+```
