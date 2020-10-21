@@ -1373,3 +1373,16 @@ if (name === 'emails' && values[name]) {
 * Diagram Link: https://app.diagrams.net/?mode=github#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2FFullstackReactCode%2Fmaster%2Fdiagrams%2F06%2Fdiagrams.xml
 * D 6-emails:
 * The email validation logic is made into a separate file so that other components may utilize this in the future
+
+### Displaying Invalid Emails
+* D 7-email:
+* I referred https://redux-form.com/8.2.2/examples/fieldlevelvalidation/ for email regex
+* The Instructor used emailregex.com
+```js
+re.test(email) === false
+// or in short
+!re.test(email)
+```
+* We have used === false for better readability in the above expression
+* When we run, we get Cannot read property 'split' of undefined
+  * When the form is first built by redux form, validation automatically runs one time
