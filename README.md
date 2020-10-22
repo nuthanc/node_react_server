@@ -1392,3 +1392,21 @@ re.test(email) === false
 ```js
 emails.replace(/,\s*$/, "")
 ```
+
+### Toggling Visibility
+* For removing the unnecessary Warning message in the Console, use the html regex from emailregex.com
+* D 3-form stru:
+* D 8-vis:
+  * How to handle FormReview on clicking Next
+    * Separate Route
+      * Cons: Direct navigation to that route
+    * Redux: Update some state in the redux store
+      * Flag inside redux-store for SurveyNew to show SurveyForm or Review
+      * Cons: Extra code of reducers, action creators
+    * Component State
+      * State in SurveyNew which will be either true or false
+      * Based on this, we can display either SurveyForm or ReviewForm
+      * And to both of these components, a callback can be passed to update the state
+* **Why Component level state when there is redux**
+  * Ask the question: Do you ever think this information will be used in any other Component
+  * In our case,NO. So, component level state is sufficient
