@@ -1410,3 +1410,14 @@ emails.replace(/,\s*$/, "")
 * **Why Component level state when there is redux**
   * Ask the question: Do you ever think this information will be used in any other Component
   * In our case,NO. So, component level state is sufficient
+
+### Advancing From SurveyForm
+* Initializing Component level state
+```js
+constructor(props){
+  super(props);
+  this.state = {showReview: false} 
+}
+// Equivalent to
+state = {showReview: false} 
+```
