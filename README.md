@@ -1435,3 +1435,7 @@ state = {showReview: false}
 * We see the value in survey.form.surveyForm.values
 * Here surveyForm is the name of the form given in the argument to reduxForm
   * This helps in namespacing when there are multiple forms
+
+### Refactoring Form Fields
+* Whatever we return from mapStateToProps will appear as props to the Component
+* Create formFields.js containing the FIELDS list
