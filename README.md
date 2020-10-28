@@ -1421,3 +1421,17 @@ constructor(props){
 // Equivalent to
 state = {showReview: false} 
 ```
+
+### Persisting Form Values
+* Option to reduxForm, destroyOnUnmount
+  * It is true by default
+  * If it is set to false, it will keep the values
+* Unmount: When the Component is no longer shown
+* D 4-form with: To communicate the values submitted in the form
+  * We are using redux
+  * And since we used redux-form, we don't have to wire up the action creators and reducers
+* But we still need to wire up using connect helper in SurveyFormReview
+* console log state in mapStateToProps to check its value
+* We see the value in survey.form.surveyForm.values
+* Here surveyForm is the name of the form given in the argument to reduxForm
+  * This helps in namespacing when there are multiple forms
