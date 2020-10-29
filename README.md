@@ -1439,3 +1439,6 @@ state = {showReview: false}
 ### Refactoring Form Fields
 * Whatever we return from mapStateToProps will appear as props to the Component
 * Create formFields.js containing the FIELDS list
+
+### Finalizing Review Fields
+* Import formFields and add reviewFields variable instead of creating a new function
