@@ -1442,3 +1442,10 @@ state = {showReview: false}
 
 ### Finalizing Review Fields
 * Import formFields and add reviewFields variable instead of creating a new function
+
+### Outstanding Form Work
+* For submit, it's tied to an Action Creator
+* In actions index.js file, add submitSurvey action
+* For dummy check, we need to return an object containing type
+* Then import this in SurveyFormReview
+* Test this out by running npm run dev and after clicking the Send Survey, there should be no errors in the Console
