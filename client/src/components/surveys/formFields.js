@@ -2,5 +2,5 @@ export default [
   { name: 'title', label: 'Survey Title' },
   { name: 'subject', label: 'Subject Line' },
   { name: 'body', label: 'Email body' },
-  { name: 'emails', label: 'Recipient List' },
+  { name: 'recipients', label: 'Recipient List' },
 ];
