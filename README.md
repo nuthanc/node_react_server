@@ -1449,3 +1449,10 @@ state = {showReview: false}
 * For dummy check, we need to return an object containing type
 * Then import this in SurveyFormReview
 * Test this out by running npm run dev and after clicking the Send Survey, there should be no errors in the Console
+
+### Dumping Form Values
+* Import reduxForm in SurveyForm and wrap the SurveyNew component with it
+* And this takes care of only showing the formFields when Back is entered from SurveyFormReview
+* The logic works like this:
+  * Whenever the SurveyForm is unmounted, like moving to SurveyFormReview, then destroyOnUmount is false and the form retain its values
+  * But whenever SurveyNew is unmounted, like moving to a page other than SurveyForm and SurveyFormReview, the form value is cleared due to default behaviour of clearing the form
