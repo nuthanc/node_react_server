@@ -1460,3 +1460,15 @@ state = {showReview: false}
 ### Fixing Property Names
 * Diagram Link: https://app.diagrams.net/?mode=github#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2FFullstackReactCode%2Fmaster%2Fdiagrams%2F06%2Fdiagrams.xml
 * D 12-prop: Mismatch
+
+### Posting to Surveys
+* D 9-on:
+* Test by running 
+* Give the following input
+```txt
+{title: "Survey #10", subject: "Please Give Feedback", body: "Did you like our service?", recipients: "rovanova.nuthan@gmail.com"}
+```
+```sh
+export NODE_TLS_REJECT_UNAUTHORIZED='0'
+npm run dev
+```
