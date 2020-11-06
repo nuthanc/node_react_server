@@ -1472,3 +1472,15 @@ state = {showReview: false}
 export NODE_TLS_REJECT_UNAUTHORIZED='0'
 npm run dev
 ```
+
+### Redirect on Submit
+* We want programmatic navigation
+* D 10-react:
+  * App is where we create our initial Routing definition and SurveyNew is directly rendered by React Router
+  * Since SurveyNew is directly rendered by React Router, it has props sent from React Router to handle navigation
+  * But it is not passed down to SurveyForm and SurveyFormReview and submitSurvey
+* D 11-withRouter: Helper
+  * Google react router and look for withRouter
+* We are gonna hook up withRouter to SurveyFormReview
+* So after this history object is passed as props to the Component
+* After this test this out
