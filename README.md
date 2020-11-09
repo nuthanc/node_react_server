@@ -1510,3 +1510,11 @@ npm install -g localtunnel
 ```txt
 your url is: https://cnuthancalksdfjlka.loca.lt
 ```
+
+### Testing Webhooks
+* Open Sendgrid dashboard
+* https://app.sendgrid.com/
+* Select Settings -> Mail Settings -> Event Webhook
+  * Enable in Status
+  * Copy paste the url: https://cnuthancalksdfjlka.loca.lt/api/surveys/webhooks
+  * Click on Test Your Integration
