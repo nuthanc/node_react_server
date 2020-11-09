@@ -1500,3 +1500,13 @@ npm run dev
   * localtunnel.com: Outside service that we are gonna make use of 
   * http://localtunnel.github.io/www/
 
+### LocalTunnel Setup
+```sh
+npm install -g localtunnel
+```
+* Subdomain needs to be mentioned in webhook scripts because many people will be using localtunnel.com
+  * Put something random
+* npm run dev to test
+```txt
+your url is: https://cnuthancalksdfjlka.loca.lt
+```
