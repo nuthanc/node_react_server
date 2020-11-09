@@ -1489,3 +1489,14 @@ npm run dev
 * Record feedback
 * Diagram link: https://app.diagrams.net/?mode=github#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2FFullstackReactCode%2Fmaster%2Fdiagrams%2F05%2Fdiagrams.xml
 * D 21-flow: Flow
+
+### Webhooks in Development
+* Diagram link: https://app.diagrams.net/?mode=github#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2FFullstackReactCode%2Fmaster%2Fdiagrams%2F07%2Fdiagrams.xml
+* D 1:
+* D 2: In production
+  * No problem whatsoever, since we give a public domain
+* D 3: Dev
+* D 4: Issue solved with local tunnel
+  * localtunnel.com: Outside service that we are gonna make use of 
+  * http://localtunnel.github.io/www/
+
