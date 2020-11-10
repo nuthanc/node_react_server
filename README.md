@@ -1518,3 +1518,43 @@ your url is: https://cnuthancalksdfjlka.loca.lt
   * Enable in Status
   * Copy paste the url: https://cnuthancalksdfjlka.loca.lt/api/surveys/webhooks
   * Click on Test Your Integration
+
+### Localtunnel crashing issues
+```txt
+For MACOS/Linux
+
+I've written a tiny script to automatically restart your localtunnel if it crashes.  Here's what to do:
+
+In your root project directory, create a new file called sendgrid_webhook.sh .  Inside of it, add the following code:
+
+function localtunnel {
+  lt -s YOUR_SUBDOMAIN --port 5000
+}
+until localtunnel; do
+echo "localtunnel server crashed"
+sleep 2
+done
+
+Replace YOUR_SUBDOMAIN with the subdomain you picked!
+
+Then in your package.json file, replace the "webhook" script with this:
+
+"webhook": "./sendgrid_webhook.sh"
+```
+```txt
+------- Windows Directions --------
+At the terminal, run npm install --save-dev forever 
+
+In your root project directory, create a new file called sendgrid_webhook.js .  Add the following to that file:
+
+var localtunnel = require('localtunnel');
+localtunnel(5000, { subdomain: <YOUR_SUBDOMAIN> }, function(err, tunnel) {
+  console.log('LT running')
+});
+Replace <YOUR_SUBDOMAIN> with the subdomain name you picked, so it should look something like 
+
+{ subdomain: 'asdfasdf' }
+In the package.json file, replace the "webhook" script with the following:
+
+"webhook": "forever sendgrid_webhook.js"
+```
