@@ -1583,3 +1583,27 @@ In the package.json file, replace the "webhook" script with the following:
    }
  ]
 ```
+
+### Encoding Survey Data
+* D 6-url:
+  * Don't know which survey was clicked
+  * Don't know what was clicked
+* D 7-vot: Solution to above problem of which survey was clicked
+* Changes in surveyTemplate file
+* Create a new Survey and test
+```txt
+[
+   {
+     email: 'rovanova.nuthan@gmail.com',
+     event: 'click',
+     ip: '49.44.85.10',
+     sg_event_id: '9TqvS0PhRGK3DvDzMXhpwQ',
+     sg_message_id: 'XnA8p5ufRaebc8DnyNiQgw.filterdrecv-p3iad2-745ddd55b7-dpxdv-19-5FAAB144-5.0',
+     timestamp: 1605022038,
+     url: 'http://localhost:5000/api/surveys/5faab142935026bad16eeff2/yes',
+     url_offset: { index: 0, type: 'html' },
+     useragent: 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36'
+   }
+ ]
+```
+
