@@ -1558,3 +1558,28 @@ In the package.json file, replace the "webhook" script with the following:
 
 "webhook": "forever sendgrid_webhook.js"
 ```
+
+### Finalizing Webhook Setup
+* Diagram link: https://app.diagrams.net/?mode=github#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2FFullstackReactCode%2Fmaster%2Fdiagrams%2F07%2Fdiagrams.xml
+* D 5-req: Webhook Body
+* In https://app.sendgrid.com/settings/mail_settings
+  * HTTP Post URL: https://cnuthancalksdfjlka.loca.lt/api/surveys/webhooks
+  * Select Clicked Checkbox
+* Create new email and check
+* Open the email and click on Yes
+```txt
+// Console log
+[
+   {
+     email: 'rovanova.nuthan@gmail.com',
+     event: 'click',
+     ip: '117.192.85.120',
+     sg_event_id: 'C6UAO9LcTTmEgP5BLObzYg',
+     sg_message_id: 'CUHuMYm7RbCdsoX2NZEL_A.filterdrecv-p3las1-7b4858585b-5gfq9-17-5FAAAF3F-8C.0',
+     timestamp: 1605021537,
+     url: 'http://localhost:5000/api/surveys/thanks',
+     url_offset: { index: 0, type: 'html' },
+     useragent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36'
+   }
+ ]
+```
