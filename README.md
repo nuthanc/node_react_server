@@ -1607,3 +1607,6 @@ In the package.json file, replace the "webhook" script with the following:
  ]
 ```
 
+### Dirty Data from Webhooks
+* Very quick succession click on Yes 2 times in a row
+* Pre-processing to remove duplicate clicks and filter events only of click
