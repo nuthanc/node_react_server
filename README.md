@@ -1655,3 +1655,7 @@ npm i lodash path-parser
 { surveyId: '5face2196464ddd00389849e', choice: 'yes' }
 { surveyId: '5face2196464ddd00389849e', choice: 'yes' }
 ```
+
+### Code Cleanup
+* match in surveyRoutes either an object or null
+* match cannot be destructured because when p.test is null, it will throw an error
