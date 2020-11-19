@@ -1614,3 +1614,44 @@ In the package.json file, replace the "webhook" script with the following:
 ### Processing Pipeline
 * D 9-weak: 
 * D 8-extract: 
+
+### Parsing the Route
+```sh
+npm i lodash path-parser
+```
+* Changes in survyeRoutes
+```txt
+
+ [
+   {
+     email: 'rovanova.nuthan@gmail.com',
+     event: 'click',
+     ip: '49.44.83.235',
+     sg_event_id: 'ZxWpuMx4RZSKz1-bizzd-w',
+     sg_message_id: 'xR0324UIQWuJ8to9vEEMTQ.filterdrecv-p3las1-8659fd955-lzdrl-19-5FACE21C-D.0',
+     timestamp: 1605165618,
+     url: 'http://localhost:5000/api/surveys/5face2196464ddd00389849e/yes',
+     url_offset: { index: 0, type: 'html' },
+     useragent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36'
+   }
+ ]
+ [
+   {
+     email: 'rovanova.nuthan@gmail.com',
+     event: 'click',
+     ip: '203.171.242.70',
+     sg_event_id: 'xKyFlzf5T9mc1ERzsiF6Rw',
+     sg_message_id: 'xR0324UIQWuJ8to9vEEMTQ.filterdrecv-p3las1-8659fd955-lzdrl-19-5FACE21C-D.0',
+     timestamp: 1605165618,
+     url: 'http://localhost:5000/api/surveys/5face2196464ddd00389849e/yes',
+     url_offset: { index: 0, type: 'html' },
+     useragent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36'
+   }
+ ]
+```
+* npm run dev and check by clicking on the existing email
+```js
+// console log
+{ surveyId: '5face2196464ddd00389849e', choice: 'yes' }
+{ surveyId: '5face2196464ddd00389849e', choice: 'yes' }
+```
