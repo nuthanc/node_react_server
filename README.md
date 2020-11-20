@@ -1659,3 +1659,17 @@ npm i lodash path-parser
 ### Code Cleanup
 * match in surveyRoutes either an object or null
 * match cannot be destructured because when p.test is null, it will throw an error
+```js
+[
+   {
+     email: 'rovanova.nuthan@gmail.com',
+     surveyId: '5face2196464ddd00389849e',
+     choice: 'yes'
+   }
+ ]
+```
+
+### Unique Events
+* compact from lodash will remove all that are undefined
+* No same email and surveyId
+* Test this out by clicking on the email couple of times
