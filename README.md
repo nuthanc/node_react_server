@@ -1673,3 +1673,7 @@ npm i lodash path-parser
 * compact from lodash will remove all that are undefined
 * No same email and surveyId
 * Test this out by clicking on the email couple of times
+
+### Lodash Chain Helper
+* Diagram link: https://app.diagrams.net/?mode=github#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2FFullstackReactCode%2Fmaster%2Fdiagrams%2F07%2Fdiagrams.xml
+
