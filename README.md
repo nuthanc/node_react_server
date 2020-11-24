@@ -1706,4 +1706,22 @@ _.forEach(events, ({surveyId, email, choice}) => {
   }
 })
 ```
-* Need to put the burden on Mongo and not in the Node Server
+* Need to put the burden on Mongo and not in the Express Server
+
+### Finding the Exact Survey
+* D 11-mongo:
+* Right Sample query
+```js
+email = 'a@a.com'
+Survey.updateOne({
+  id: surveyId,
+  recipients: {
+    $elemMatch: { email: email, responded: false }
+  }
+}, {
+
+})
+// sub-criteria in recipients
+// updateOne instead of findOne
+// Entire update taken care in the mongo world without pulling into Express
+```
