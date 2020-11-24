@@ -1725,3 +1725,23 @@ Survey.updateOne({
 // updateOne instead of findOne
 // Entire update taken care in the mongo world without pulling into Express
 ```
+
+### Updating Records
+```js
+choice = 'yes' || 'no';
+email = 'a@a.com';
+Survey.updateOne({
+  id: surveyId,
+  recipients: {
+    $elemMatch: { email: email, responded: false }
+  }
+}, {
+  $inc: { [choice]: 1 },
+  $set: { 'recipients.$.responded': true }
+})
+// $inc is a Mongo operator that allows up to put intelligent logic within our query
+// In this case, find choice property and increment it by one
+// [] is used for dynamic interpretation
+// $ lines up with elemMatch, like in index 500
+```
+* All the above operations in Mongo without pulling into Express
