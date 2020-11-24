@@ -1677,3 +1677,33 @@ npm i lodash path-parser
 ### Lodash Chain Helper
 * Diagram link: https://app.diagrams.net/?mode=github#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2FFullstackReactCode%2Fmaster%2Fdiagrams%2F07%2Fdiagrams.xml
 
+### Bad Mongoose Queries
+* D 12-query:
+```js
+let survey = await Survey.findById(surveyId);
+// Very bad as survey also contains sub-document collection of recipients(which is very big)
+```
+* Entire code
+```js
+_.forEach(events, ({surveyId, email, choice}) => {
+  let survey = await Survey.findById(surveyId);
+
+  // find a recepient that matches email and has not responded yet
+  const responder = survey.recipients.find(recipient => 
+    recipient.email === email && !recipient.responded
+  );
+
+  if(!responder) {
+    // recipient has already responded
+    return console.warn('Response already logged!');
+  } else {
+    // recipient hasn't responded, set their responded flag to true
+    survey.recipients.id(responder._id).responded = true;
+    survey[answer] += 1;
+    survey.lastResponded = new Date(timestamp * 1000);
+
+    survey.save();
+  }
+})
+```
+* Need to put the burden on Mongo and not in the Node Server
