@@ -1758,3 +1758,9 @@ Survey.updateOne({
 * https://cloud.mongodb.com/v2/5ebc0abdea7241503870c172#metrics/replicaSet/5f5a1a1be842ae722f1dd94b/explorer/test/surveys/find
 * NodeReactCluster
 * For Super final test, we see yes: 1, even though we clicked on it multiple times and rovanova.nuthan's responded is true
+
+### Odds n' Ends Around Surveys
+* Add lastResponded: new Date()
+* Reuse the previous Super final test email to get Thanks for voting message
+  * Edit the responded to false and click again
+
