@@ -1753,3 +1753,8 @@ Survey.updateOne({
   * Recipient list: rovanova.nuthan@gmail.com, nuthanc@juniper.net
 * Click on Yes multiple times using Option click
 * Need to check in mlab as there are no console logs
+
+### Testing the Query
+* https://cloud.mongodb.com/v2/5ebc0abdea7241503870c172#metrics/replicaSet/5f5a1a1be842ae722f1dd94b/explorer/test/surveys/find
+* NodeReactCluster
+* For Super final test, we see yes: 1, even though we clicked on it multiple times and rovanova.nuthan's responded is true
