@@ -1745,3 +1745,11 @@ Survey.updateOne({
 // $ lines up with elemMatch, like in index 500
 ```
 * All the above operations in Mongo without pulling into Express
+
+### Executing Queries
+* Mongodb world, need to use _id
+* exec : Executes the query
+* npm run dev and create a New survey to test
+  * Recipient list: rovanova.nuthan@gmail.com, nuthanc@juniper.net
+* Click on Yes multiple times using Option click
+* Need to check in mlab as there are no console logs
