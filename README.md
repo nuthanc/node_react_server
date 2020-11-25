@@ -1764,3 +1764,27 @@ Survey.updateOne({
 * Reuse the previous Super final test email to get Thanks for voting message
   * Edit the responded to false and click again
 
+### Mongoose Tips
+* Google mongoose js update document in subdocument collection
+* Copy the following and enter node cli
+```js
+const express = require('express');
+const mongoose = require('mongoose');
+const cookieSession = require('cookie-session');
+const passport = require('passport');
+const bodyParser = require('body-parser');
+const keys = require('./config/keys');
+require('./models/User');
+require('./models/Survey');
+require('./services/passport');
+
+mongoose.connect(keys.mongoURI, { useNewUrlParser: true });
+```
+```sh
+node
+```
+```js
+const Survey = mongoose.model('surveys')
+Survey.find({}).then(console.log)
+Survey.find({title: 'Super final test'}).then(console.log)
+```
