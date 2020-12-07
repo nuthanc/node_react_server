@@ -1817,3 +1817,8 @@ axios.get('/api/surveys')
 * When the Survey model is sent over the Internet to the Browser
   * dateSent is not Date object but a String
 * Use of anchor tag in SurveyList is not meant for any type of Navigation but is used as a *hack*
+
+### Reversing the Survey List
+* reverse method to surveys
+* Tweak the numbers in mongo db
+  * https://cloud.mongodb.com/v2/5ebc0abdea7241503870c172#metrics/replicaSet/5f5a1a1be842ae722f1dd94b/explorer/test/surveys/find
