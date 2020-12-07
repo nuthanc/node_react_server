@@ -1798,3 +1798,9 @@ Survey.find({title: 'Super final test'}).then(console.log)
   * Query select method
   * To pull only specific properties
 
+### Testing Surveys Endpoint
+* npm run dev
+* Open up Network tab
+```js
+axios.get('/api/surveys')
+```
