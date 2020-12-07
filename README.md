@@ -1799,8 +1799,12 @@ Survey.find({title: 'Super final test'}).then(console.log)
   * To pull only specific properties
 
 ### Testing Surveys Endpoint
+* export NODE_TLS_REJECT_UNAUTHORIZED='0'
 * npm run dev
 * Open up Network tab
 ```js
 axios.get('/api/surveys')
 ```
+
+### Wiring Surveys Up to Redux
+* Create types, action creator and reducer
