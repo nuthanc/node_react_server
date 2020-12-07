@@ -1811,3 +1811,9 @@ axios.get('/api/surveys')
 
 ### Wiring React to Redux
 * Create SurveyList component
+
+### Rendering a List of Surveys
+* https://materializecss.com/cards.html
+* When the Survey model is sent over the Internet to the Browser
+  * dateSent is not Date object but a String
+* Use of anchor tag in SurveyList is not meant for any type of Navigation but is used as a *hack*
