@@ -1822,3 +1822,16 @@ axios.get('/api/surveys')
 * reverse method to surveys
 * Tweak the numbers in mongo db
   * https://cloud.mongodb.com/v2/5ebc0abdea7241503870c172#metrics/replicaSet/5f5a1a1be842ae722f1dd94b/explorer/test/surveys/find
+
+### Expanding the App
+```sh
+git add .
+git commit -m "Final commit"
+git push heroku master
+heroku open
+```
+* Webhook change link to Production in HTTP POST URL
+*  Diagram link: https://app.diagrams.net/?mode=github#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2FFullstackReactCode%2Fmaster%2Fdiagrams%2F07%2Fdiagrams.xml
+* **Expanding the App**
+  * D 13-ideas:
+
