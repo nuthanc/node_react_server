@@ -1808,3 +1808,6 @@ axios.get('/api/surveys')
 
 ### Wiring Surveys Up to Redux
 * Create types, action creator and reducer
+
+### Wiring React to Redux
+* Create SurveyList component
