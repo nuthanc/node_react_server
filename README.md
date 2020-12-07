@@ -1788,3 +1788,7 @@ const Survey = mongoose.model('surveys')
 Survey.find({}).then(console.log)
 Survey.find({title: 'Super final test'}).then(console.log)
 ```
+
+### Fetching a List of Surveys
+* Diagram link: https://app.diagrams.net/?mode=github#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2FFullstackReactCode%2Fmaster%2Fdiagrams%2F06%2Fdiagrams.xml
+* Diagram 2: /api/surveys
